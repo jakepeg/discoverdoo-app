@@ -16,6 +16,7 @@ const MyActivities = (props) => {
     <>
       <Head>
         <title>DiscoverDoo - My activities</title>
+        <meta name="title" content="DiscoverDoo fun finder" />
       </Head>
       <div className="contain home-page">
         { auth0.isAuthenticated() &&

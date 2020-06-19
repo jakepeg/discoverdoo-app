@@ -19,6 +19,7 @@ const DetailPage = (props) => {
     <>
       <Head>
         <title>{`${activity.name} - DiscoverDoo`}</title>
+        <meta name="title" content={`${activity.name} - DiscoverDoo fun finder`} />
       </Head>
       <div className="contain top-space">
         <div className="details-card">

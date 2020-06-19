@@ -23,6 +23,7 @@ class EditActivity extends React.Component {
       <>
         <Head>
           <title>DiscoverDoo - Edit activity</title>
+          <meta name="title" content="DiscoverDoo fun finder" />
         </Head>
         <div className="container">
           <Edit 

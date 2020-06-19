@@ -26,6 +26,7 @@ const Home = (props) => {
     <>
       <Head>
         <title>DiscoverDoo fun finder</title>
+        <meta name="title" content="DiscoverDoo fun finder" />
       </Head>
       <div className="contain home-page">
         <div className="rowz">

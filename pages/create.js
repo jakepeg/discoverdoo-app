@@ -6,6 +6,7 @@ const CreatePage = () => (
   <>
     <Head>
       <title>DiscoverDoo - Add an activity</title>
+      <meta name="title" content="DiscoverDoo fun finder" />
     </Head>
     { auth0.isAuthenticated() &&
       <Create />
