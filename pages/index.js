@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import Head from 'next/head'
 import Filter from '../components/filter'
 import ActivityList from '../components/activityList'
 import { getActivities, getCategories } from '../actions'
-import Card from '../components/card'
 
 const Home = (props) => {
 
@@ -13,11 +13,9 @@ const Home = (props) => {
   }
 
   const filterActivities = activities => {
-
     if (filter === 'All activities') {
       return activities
     }
-
     return activities.filter((a) => {
       console.log(filter)
       return a.category && a.category.includes(filter)
@@ -25,24 +23,21 @@ const Home = (props) => {
   }
 
   return (
-    <div className="contain home-page">
-      <div className="rowz">
-
-          <Filter 
-            changeCategory={changeCategory}
-            activeCategory={filter}
-            categories={props.categories}
-          />
-
-      </div>
-
-          {/* <div className="" id="grid"> */}
-            {/* <Card /> */}
-
-            <ActivityList activities={filterActivities(props.activities) || []} />
-          {/* </div> */}
+    <>
+      <Head>
+        <title>DiscoverDoo fun finder</title>
+      </Head>
+      <div className="contain home-page">
+        <div className="rowz">
+            <Filter 
+              changeCategory={changeCategory}
+              activeCategory={filter}
+              categories={props.categories}
+            />
         </div>
-
+        <ActivityList activities={filterActivities(props.activities) || []} />
+      </div>
+    </>
   )
 }
 

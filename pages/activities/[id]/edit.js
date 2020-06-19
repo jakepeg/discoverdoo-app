@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Router from 'next/router'
 import Edit from '../../../components/edit'
 import { getActivityById, updateActivity } from '../../../actions'
@@ -19,12 +20,17 @@ class EditActivity extends React.Component {
   render() {
     const { activity } = this.props
     return (
-      <div className="container">
-        <Edit 
-        submitButton="Update"
-        initialData={activity} 
-        handleFormSubmit={this.HandleUpdateActivity} />
-      </div>
+      <>
+        <Head>
+          <title>DiscoverDoo - Edit activity</title>
+        </Head>
+        <div className="container">
+          <Edit 
+          submitButton="Update"
+          initialData={activity} 
+          handleFormSubmit={this.HandleUpdateActivity} />
+        </div>
+      </>
     )
   }
 

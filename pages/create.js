@@ -1,8 +1,12 @@
 import Create from '../components/create'
 import auth0 from '../services/auth0'
+import Head from 'next/head'
 
 const CreatePage = () => (
   <>
+    <Head>
+      <title>DiscoverDoo - Add an activity</title>
+    </Head>
     { auth0.isAuthenticated() &&
       <Create />
     }

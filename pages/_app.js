@@ -17,7 +17,7 @@ class ActivityApp extends App {
     return (
       <div>
         <Head>
-          <title>DiscoverDoo fun finder</title>
+          {/* <title>DiscoverDoo fun finder</title> */}
           <meta name="title" content="DiscoverDoo fun finder" />
           <meta name="description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
           {/* Open Graph / Facebook */}
