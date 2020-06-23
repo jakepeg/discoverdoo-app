@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-// import LazyLoad from 'react-lazyload'
+import LazyLoad from 'react-lazyload'
 
 const ActivityList = (props) => {
   const { activities } = props
@@ -10,13 +10,11 @@ const ActivityList = (props) => {
       <div className="card-grid" id="grid">
       { activities.map(activity => (
         <div key={activity.id}>
-        {/* <LazyLoad height={400} throttle={500}> */}
-
+        <LazyLoad height={400} throttle={500}>
               <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
-                {/* <div className="card-image" style={{background: 'url(' + activity.image + ')'}}></div> */}
-                <img className="card-image" src={activity.image} loading="lazy" />
+                <img className="card-image" src={activity.image} />
                 <div className="card-content">
                   <h2>{activity.name}</h2>
                   <div className="card-footer">
@@ -27,8 +25,7 @@ const ActivityList = (props) => {
                 </div>
                 </a>
               </Link>
-
-            {/* </LazyLoad> */}
+            </LazyLoad>
             </div>
           )
         )
@@ -115,8 +112,6 @@ const ActivityList = (props) => {
             justify-content: space-around;
           }
         }
-
-
 
       `}</style>
     </>
