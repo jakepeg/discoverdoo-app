@@ -137,7 +137,7 @@ const Create = (props) => {
     }
   }
 
-    const [image, setImage] = useState('')
+    const [image, setImage] = useState('doozone/tzgl9kjalula4brx0irl.png')
     const [loading, setLoading] = useState(false)
     const uploadImage = async e => {
       const files = e.target.files
@@ -153,12 +153,16 @@ const Create = (props) => {
         }
       )
       const file = await res.json()
-  
-      setImage(file.secure_url)
+      const newFileName = file.public_id + '.' + file.format
+  // console.log(file)
+      // setImage(file.secure_url)
+
+      setImage(newFileName)
       setLoading(false)
       setForm({
         ...form,
-        image: file.secure_url
+        image: newFileName
+        // image: file.public_id
       })
     }
 
@@ -286,7 +290,7 @@ const Create = (props) => {
           {loading ? (
             <h3>LOADING IMAGE...</h3>
           ) : (
-            <img src={image} style={{width: '150px'}} />
+            <img src={`https://res.cloudinary.com/jakepeg/image/upload/v1593005651/${image}`} style={{width: '150px'}} />
           )}
         </div>
       </div>

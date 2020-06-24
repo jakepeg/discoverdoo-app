@@ -14,7 +14,7 @@ const ActivityList = (props) => {
               <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
-                <img className="card-image" src={activity.image} />
+                <img className="card-image" src={`https://res.cloudinary.com/jakepeg/image/upload/v1593005651/${activity.image}`} />
                 <div className="card-content">
                   <h2>{activity.name}</h2>
                   <div className="card-footer">

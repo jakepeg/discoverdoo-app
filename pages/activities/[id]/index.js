@@ -82,7 +82,7 @@ const DetailPage = (props) => {
               }
 
             </div>
-            <img className="image-section" src={activity.image} alt={activity.name} />
+            <img className="image-section" src={`https://res.cloudinary.com/jakepeg/image/upload/v1593005651/${activity.image}`} alt={activity.name} />
           
           </div>
           {/* {activity.userId === Cookies.get('sub') && */}
