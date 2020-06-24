@@ -33,11 +33,11 @@ class ActivityApp extends App {
           <meta property="twitter:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
           <meta property="twitter:image" content="https://cl.ly/cad938ecc38d/poster.png" />
           <link
-            rel="stylesheet"
+            rel="preload"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
           />
           <link
-            rel="stylesheet"
+            rel="preload"
             href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
           />
           <meta
