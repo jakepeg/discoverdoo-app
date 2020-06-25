@@ -25,10 +25,15 @@ const DetailPage = (props) => {
         <div className="details-card">
           <div className="card-header">
             
-            <a href="/" id="back-btn">
+
+            <Link href="/">
+            <a id="back-btn">
               <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
               <span className="back">BACK</span>
             </a>
+           </Link>
+
+
           </div>
 
           <div className="card-content">
