@@ -32,6 +32,7 @@ class ActivityApp extends App {
           <meta property="twitter:title" content="DiscoverDoo fun finder" />
           <meta property="twitter:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
           <meta property="twitter:image" content="https://cl.ly/cad938ecc38d/poster.png" />
+
           <link
             rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
@@ -40,7 +41,8 @@ class ActivityApp extends App {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
-          <script rel="preconnect" src="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></script>
+          <link rel="preload" as="script" href="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></link>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></script>
           <script
           dangerouslySetInnerHTML={{
             __html: `
