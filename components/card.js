@@ -42,7 +42,7 @@ const Card = (props) => {
 
       h2 {
           font-size: 1.5rem;
-          font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+          font-family: "Helvetica", "Arial", sans-serif;
           font-weight: 400;
           line-height: 1;
           letter-spacing: 0em;

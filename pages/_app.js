@@ -34,10 +34,6 @@ class ActivityApp extends App {
           <meta property="twitter:image" content="https://cl.ly/cad938ecc38d/poster.png" />
           <link
             rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
-          />
-          <link
-            rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
           />
           <meta
@@ -83,7 +79,7 @@ class ActivityApp extends App {
           }
 
           body {
-            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+            font-family: 'Helvetica', 'Arial', sans-serif;
             font-size: 1rem;
             background-color: #00BCD4;
             min-height: 100vh;
@@ -179,7 +175,7 @@ class ActivityApp extends App {
 
           h1 {
             font-size: 2rem;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-family: "Helvetica", "Arial", sans-serif;
             font-weight: 300;
             line-height: 1;
             letter-spacing: 0em;
@@ -188,7 +184,7 @@ class ActivityApp extends App {
 
           h2 {
             font-size: 1.5rem;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-family: "Helvetica", "Arial", sans-serif;
             font-weight: 400;
             line-height: 1;
             letter-spacing: 0em;
@@ -197,7 +193,7 @@ class ActivityApp extends App {
 
           h3 {
             font-size: 2rem;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-family: "Helvetica", "Arial", sans-serif;
             font-weight: 300;
             line-height: 1;
             letter-spacing: 0em;
@@ -207,7 +203,7 @@ class ActivityApp extends App {
 
           h4 {
             font-size: 1.2rem;
-            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-family: "Helvetica", "Arial", sans-serif;
             font-weight: 300;
             line-height: 1;
             letter-spacing: 0em;
@@ -239,7 +235,7 @@ class ActivityApp extends App {
             background-color: #00BCD4!important;
             color: #fff!important;
             font-size: 1.9em!important;
-            font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif!important;
+            font-family: 'Helvetica', 'Arial', sans-serif!important;
             font-weight: 400!important;
             cursor: pointer!important;
           }
@@ -284,7 +280,7 @@ class ActivityApp extends App {
 
           .react-select__option {
             font-size: 1.3rem!important;
-            font-family: "Roboto","Helvetica","Arial",sans-serif;
+            font-family: "Helvetica","Arial",sans-serif;
             font-weight: 400;
             line-height: 1;
             -webkit-letter-spacing: 0em;
