@@ -44,17 +44,7 @@ class ActivityApp extends App {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
-          <script rel="preconnect" async src="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></script>
-          <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'UA-150534374-2');
-              `,
-          }}
-          />
+
         </Head>
         <Nav />
         <div className="base-page">
