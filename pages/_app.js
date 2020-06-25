@@ -33,23 +33,28 @@ class ActivityApp extends App {
           <meta property="twitter:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
           <meta property="twitter:image" content="https://cl.ly/cad938ecc38d/poster.png" />
           <link
-            rel="preload"
+            rel="stylesheet"
             href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
           />
           <link
-            rel="preload"
+            rel="stylesheet"
             href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap"
           />
           <meta
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
-
-
-
-
-
-
+          <script rel="preconnect" async src="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></script>
+          <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'UA-150534374-2');
+              `,
+          }}
+          />
         </Head>
         <Nav />
         <div className="base-page">
