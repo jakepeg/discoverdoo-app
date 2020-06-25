@@ -41,7 +41,7 @@ class ActivityApp extends App {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
-          <link rel="preload" as="script" href="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></link>
+          <link rel="preconnect" as="script" href="https://www.google-analytics.com"></link>
           <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150534374-2"></script>
           <script
           dangerouslySetInnerHTML={{
