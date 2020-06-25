@@ -45,6 +45,16 @@ class ActivityApp extends App {
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
           />
 
+
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-150534374-2', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
         </Head>
         <Nav />
         <div className="base-page">
