@@ -68,7 +68,7 @@ const Nav = () => {
           display: flex;
           padding: 15px 10px 15px 10px;
           margin-bottom: 20px;
-          background-color: #0097A7;
+          background-color: #02111B;
         }
 
         #logo {

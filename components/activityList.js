@@ -14,7 +14,7 @@ const ActivityList = (props) => {
               <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
-                <img className="card-image" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto,c_fill,h_250,w_350/v1593005651/${activity.image}`} />
+                <img className="card-image" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto,c_fill,h_250,w_350/v1593005651/${activity.image}`} alt={activity.name} />
                 
                 <div className="card-content">
                   <h2>{activity.name}</h2>
@@ -73,7 +73,7 @@ const ActivityList = (props) => {
         .card-footer {
           display: flex;
           margin-top: -7px;
-          color: rgb(0, 0, 0, 0.5);
+          color: #02111B;
         }
 
         .location {
@@ -89,7 +89,7 @@ const ActivityList = (props) => {
         }
 
         .App {
-          color: DodgerBlue;
+          color: Navy;
         }
 
         .Youtube {
