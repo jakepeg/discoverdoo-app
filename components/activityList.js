@@ -73,7 +73,7 @@ const ActivityList = (props) => {
         .card-footer {
           display: flex;
           margin-top: -7px;
-          color: #02111B;
+          color: #0b334d;
         }
 
         .location {

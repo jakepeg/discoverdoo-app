@@ -102,7 +102,7 @@ class ActivityApp extends App {
             bottom: 0;
             left: 0;
             width: 100%;
-            background-color: #02111B;
+            background-color: #0b334d;
             text-align: center;
           }
 
@@ -233,7 +233,7 @@ class ActivityApp extends App {
             width: 350px;
             border: 0 solid #fff!important;
             border-radius: 0!important;
-            border-bottom: 2px solid #02111B!important;
+            border-bottom: 2px solid #0b334d!important;
             background-color: #00BCD4!important;
             color: #fff!important;
             font-size: 1.9em!important;
@@ -261,7 +261,7 @@ class ActivityApp extends App {
           .react-select__placeholder, 
           .react-select__single-value, 
           .react-select__indicator {
-            color: #02111B!important;
+            color: #0b334d!important;
           }
 
           .react-select__indicator-separator {
