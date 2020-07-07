@@ -91,7 +91,7 @@ class ActivityApp extends App {
 
           .base-page {
             background-color: #00BCD4;
-            min-height: 100vh;
+            min-height: calc(100vh - 340px);
             position: relative;
             z-index: 1;
             margin-bottom: 0px;

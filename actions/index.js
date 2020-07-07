@@ -65,6 +65,7 @@ export const getActivities = () => {
 export const createActivity = (activity) => {
   // activity.id = Math.random().toString(36).substr(2, 7)
   activity.id = slugify(activity.name)
+  activity.promoted = false
   return axios.post(`${BASE_URL}/api/v1/activities`, activity).then(res => res.data)
 }
 
