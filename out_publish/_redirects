@@ -1,0 +1,7 @@
+# Next-on-Netlify Redirects
+/activities/:id  /.netlify/functions/next_activities_id  200
+/activities/:id/edit  /.netlify/functions/next_activities_id_edit  200
+/callback  /.netlify/functions/next_callback  200
+/create  /.netlify/functions/next_create  200
+/index  /.netlify/functions/next_index  200
+/my-activities  /.netlify/functions/next_myactivities  200
