@@ -42,11 +42,12 @@ const Home = (props) => {
   )
 }
 
-export async function getStaticProps() {
+Home.getInitialProps = async () => {
   const activities = await getActivities()
   const categories = await getCategories()
   return {
-    props: {activities, categories}
+    activities,
+    categories
   }
 }
 
