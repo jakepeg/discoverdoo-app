@@ -105,9 +105,19 @@ const DetailPage = (props) => {
   )
 }
 
-DetailPage.getInitialProps = async ({ query }) => {
+// DetailPage.getInitialProps = async ({ query }) => {
+//   const activity = await getActivityById(query.id)
+//   return { activity }
+// }
+
+export async function getServerSideProps({ query }) {
   const activity = await getActivityById(query.id)
-  return { activity }
+  console.log("SSR (I think!)")
+  return {
+    props: {activity}
+  }
 }
+
+
 
 export default DetailPage
