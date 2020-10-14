@@ -42,22 +42,22 @@ const Home = (props) => {
   )
 }
 
-// export async function getStaticProps() {
-//   const activities = await getActivities()
-//   const categories = await getCategories()
-//   console.log("SSG (I think!)")
-//   return {
-//     props: {activities, categories}
-//   }
-// }
-
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const activities = await getActivities()
   const categories = await getCategories()
-  console.log("SSR (I think!)")
+  console.log("SSG (I think!)")
   return {
     props: {activities, categories}
   }
 }
+
+// export async function getServerSideProps() {
+//   const activities = await getActivities()
+//   const categories = await getCategories()
+//   console.log("SSR (I think!)")
+//   return {
+//     props: {activities, categories}
+//   }
+// }
 
 export default Home
