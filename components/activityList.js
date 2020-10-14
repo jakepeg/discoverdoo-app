@@ -14,15 +14,14 @@ const ActivityList = (props) => {
               <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
-                {/* <img className="card-image" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto,c_fill,h_250,w_350/v1593005651/${activity.image}`} alt={activity.name} /> */}
-                
-                <div className="card-content">
-                  <h2>{activity.name}</h2>
-                  <div className="card-footer">
-                    <div className="age-range">{'age ' + activity.ageFrom + ' - ' + activity.ageTo}</div>
-                    <div className="location">{activity.category} - <span className={activity.medium}>{activity.medium}</span></div>
+                  <img className="card-image" src={`https://res.cloudinary.com/jakepeg/image/upload/q_auto,f_auto,c_fill,h_250,w_350/v1593005651/${activity.image}`} alt={activity.name} />
+                  <div className="card-content">
+                    <h2>{activity.name}</h2>
+                    <div className="card-footer">
+                      <div className="age-range">{'age ' + activity.ageFrom + ' - ' + activity.ageTo}</div>
+                      <div className="location">{activity.category} - <span className={activity.medium}>{activity.medium}</span></div>
+                    </div>
                   </div>
-                </div>
                 </div>
                 </a>
               </Link>
