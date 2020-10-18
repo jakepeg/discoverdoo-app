@@ -437,10 +437,8 @@ class ActivityApp extends App {
         }
 
         .contain {
-          width: 100%;
+          margin: 0 auto;
           max-width: 1140px;
-          margin-right: auto;
-          margin-left: auto;
         }
 
         .rowz {
@@ -459,8 +457,6 @@ class ActivityApp extends App {
           }
 
           .contain {
-            width: 100%;
-            max-width: 1140px;
             padding-right: 20px;
             padding-left: 20px;
           }

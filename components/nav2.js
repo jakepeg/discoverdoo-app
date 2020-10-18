@@ -39,12 +39,16 @@ const MyActivities = () => {
 const Nav = () => {
 
   return (
-    <>
-      <header>
+    <header className="header">
+      <div className="main-header contain">
         <Link href="/">
-          <a><img id="logo" src="/logo.svg" alt="DooZone logo" /></a>
-        </Link>
-        <div id="menu">
+        <a className="logo-group">
+        <img src="/logo.svg" className="logo-img" alt="doo logo" />
+        <h1 className="logo-type">discoverdoo</h1>
+        </a>
+      </Link>
+
+      <div className="menu">
           { auth0.isAuthenticated() &&
           <>
           <div className="loggedin">
@@ -62,37 +66,49 @@ const Nav = () => {
           </>
           }
         </div>
-      </header>
+      </div>
       <style jsx>{`
+
         header {
-          display: flex;
-          padding: 15px 10px 15px 10px;
-          margin-bottom: 20px;
           background-color: #0b334d;
         }
 
-        #logo {
-          width: 70px;
+        .main-header {
+          display: flex;
+          justify-content: space-between;
+          padding-top: 15px;
         }
 
-        .country {
-          color: #ffffff;
+        .menu {
+          display: flex;
+          justify-content: flex-end;
+          width: 280px;
+          margin-top: 4px;
+        }
+
+        .logo-group {
+          display: flex;
+          text-decoration: none;
+          margin-top: 0px;
+          margin-left: -5px;
+        }
+
+        .logo-img {
+          margin-top: 4px;
+          width: 60px;
+          height: 35px;
+        }
+
+        .logo-type {
+          color: white;
+          font-size: 1.1rem;
+          font-weight: 400;
           margin-top: 12px;
-        }
-
-        .tagline {
-          color: #ffffff;
-          margin-top: 6px;
-          font-size: 1.4rem;
-        }
-
-        #menu {
-          margin-left: auto;
-          margin-top: 5px;
-          margin-right: 13px;
+          font-family: sans-serif;
+          letter-spacing: 1px;
         }
       `}</style>
-    </>
+    </header>
   )
 }
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
+import Hero from '../components/hero'
 import Filter from '../components/filter'
 import ActivityList from '../components/activityList'
 import { getActivities, getCategories } from '../actions'
@@ -28,6 +29,7 @@ const Home = (props) => {
         <title>DiscoverDoo fun finder</title>
         <meta name="title" content="DiscoverDoo fun finder" />
       </Head>
+      <Hero />
       <div className="contain home-page">
         <div className="rowz">
             <Filter 
