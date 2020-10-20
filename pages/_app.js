@@ -222,7 +222,7 @@ class ActivityApp extends App {
           }
 
           .react-select-container {
-            margin: 20px 0 20px 15px;
+            margin: 40px 0 40px 15px;
           }
 
           .react-select-container:focus {
@@ -249,7 +249,7 @@ class ActivityApp extends App {
             }
 
             .react-select-container {
-              margin: auto;
+              margin: 40px auto;
             }
           }
 
