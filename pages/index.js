@@ -4,6 +4,7 @@ import Hero from '../components/hero'
 import Filter from '../components/filter'
 import ActivityList from '../components/activityList'
 import { getActivities, getCategories } from '../actions'
+import CategoryButtons from '../components/categoryButtons'
 
 const Home = (props) => {
 
@@ -30,15 +31,19 @@ const Home = (props) => {
         <meta name="title" content="DiscoverDoo fun finder" />
       </Head>
       <Hero />
+      <CategoryButtons />
       <div className="contain home-page">
         <div className="rowz">
-            <Filter 
+            {/* <Filter 
               changeCategory={changeCategory}
               activeCategory={filter}
               categories={props.categories}
-            />
+            /> */}
         </div>
-        <ActivityList activities={filterActivities(props.activities) || []} />
+        <ActivityList 
+        activities={filterActivities(props.activities) || []} 
+        title="Top Picks"
+        />
       </div>
     </>
   )

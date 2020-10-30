@@ -6,14 +6,10 @@ const Hero = () => {
     <div className="hero">
       <div className="contain hero-section">
         <div className="hero-copy">
-          <h1>Discover online experiences <br />for kids</h1>
-          {/* <p className="value-prop">
-            Value Proposition
-          </p> */}
-
+          <h1>Discover online <br />activity progams <br />for kids</h1>
         </div>
         <div className="hero-image">
-          <img className="image" src={`https://res.cloudinary.com/jakepeg/image/upload/v1602843000/zen_nnifka.png`} alt="kids doing activities" />
+          <img className="image" src={`https://res.cloudinary.com/jakepeg/image/upload/c_scale,q_auto:best,w_550/v1603875618/yoga-hq_hxt0op.png`} alt="yoga girl" />
         </div>
       </div>
 
@@ -36,11 +32,15 @@ const Hero = () => {
         }
 
         .image {
-          width: 100%;
+          width: 550px;
+          position: absolute;
+          right: 0;
+          bottom: -35px;
         }
 
         .hero-image {
           max-width: 800px;
+          position: relative;
         }
 
         .value-prop {
@@ -51,11 +51,11 @@ const Hero = () => {
         }
 
         /* for phones only */
-        @media (max-width: 599px) {
+        @media (max-width: 768px) {
           .hero-section {
             margin: 0;
             grid-template-columns: 100%;
-            height: 280px;
+            height: 250px;
           }
 
           .hero-image {
@@ -68,7 +68,7 @@ const Hero = () => {
           }
 
           .hero-copy h1 {
-            line-height: 40px;
+            line-height: 45px;
             font-size: 2rem;
             text-align: center;
           }
@@ -76,7 +76,7 @@ const Hero = () => {
         }
 
         /* for-tablet-portrait-up */
-        @media (min-width: 600px) {
+        @media (min-width: 769px) {
 
           .hero-section {
             height: 300px;
@@ -84,12 +84,16 @@ const Hero = () => {
 
           .hero-copy h1 {
             line-height: 40px;
-            font-size: 1.8rem;
+            font-size: 2rem;
           }
 
           .hero-copy {
             max-width: 100%;
             margin-top: 40px;
+          }
+
+          .image {
+            width: 400px;
           }
 
         }
@@ -103,6 +107,10 @@ const Hero = () => {
 
           .hero-image {
             display: block;
+          }
+
+          .image {
+            width: 550px;
           }
 
           .hero-copy {

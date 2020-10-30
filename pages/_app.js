@@ -89,6 +89,16 @@ class ActivityApp extends App {
             margin: 0;
           }
 
+          .bm-burger-button {
+            height: 20px!important;
+            width: 25px!important;
+            margin-top: 5px;
+          }
+
+          .bm-burger-bars {
+            height: 12%!important;
+          }
+
           .base-page {
             background-color: #00BCD4;
             min-height: calc(100vh - 340px);
@@ -436,6 +446,10 @@ class ActivityApp extends App {
           display: none;
         }
 
+        .top-menu {
+          display: block;
+        }
+
         .contain {
           margin: 0 auto;
           max-width: 1140px;
@@ -484,6 +498,10 @@ class ActivityApp extends App {
 
           .bm-burger-button {
             display: block;
+          }
+
+          .top-menu {
+            display: none;
           }
 
           .loggedin {

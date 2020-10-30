@@ -7,11 +7,12 @@ const ActivityList = (props) => {
 
   return (
     <>
+    <h2 className="card-grid-title">{props.title} activities</h2>
       <div className="card-grid" id="grid">
       { activities.map(activity => (
         <div key={activity.id}>
-        <LazyLoad height={400} throttle={500}>
-              <Link href="/activities/[id]" as={`/activities/${activity.id}`}>
+          <LazyLoad height={400} throttle={500}>
+            <Link href="/activity/[id]" as={`/activity/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
                   <img className="card-image" src={`https://res.cloudinary.com/jakepeg/image/upload/q_auto,f_auto,c_fill,h_250,w_350/v1593005651/${activity.image}`} alt={activity.name} />
@@ -23,10 +24,10 @@ const ActivityList = (props) => {
                     </div>
                   </div>
                 </div>
-                </a>
-              </Link>
-            </LazyLoad>
-            </div>
+              </a>
+            </Link>
+          </LazyLoad>
+        </div>
           )
         )
       }
@@ -35,6 +36,16 @@ const ActivityList = (props) => {
 
         .nounderline {
           text-decoration: none;
+        }
+
+        .card-grid-title {
+          font-size: 2rem;
+          font-family: "Helvetica", "Arial", sans-serif;
+          font-weight: 500;
+          line-height: 1;
+          letter-spacing: 0em;
+          color: rgb(0, 0, 0, 0.8);
+          text-transform: capitalize;
         }
 
         .card-grid {

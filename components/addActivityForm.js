@@ -34,6 +34,7 @@ const AddActivityForm = (props) => {
     for (let i = 0; i < optionsLength; i++) {
       if (options[i].selected) {
         value.push(options[i].value)
+        console.log(value)
       }
     }
 
@@ -42,7 +43,6 @@ const AddActivityForm = (props) => {
       category: value.toString()
     })
   }
-
 
   const submitForm = () => {
     props.handleFormSubmit({...form})
@@ -127,17 +127,12 @@ const AddActivityForm = (props) => {
         className="form-control" 
         id="category"
         name="category">
-          <option>Adventure Sports</option>
-          <option>Attractions</option>
-          <option>Art, Crafts and Cooking</option>
-          <option>Birthday Parties</option>
-          <option>Events</option>
-          <option>Holiday Camps</option>
-          <option>Parks and Skate Parks</option>
+          <option>Academic</option>
+          <option>Art & Craft</option>
+          <option>Cooking</option>
+          <option>Games</option>
           <option>Performing Arts</option>
-          <option>Play Centres</option>
-          <option>Sport and Games</option>
-          <option>Theme Parks and Water Parks</option>
+          <option>Sport & Fitness</option>
         </select>
       </div>
       <button 

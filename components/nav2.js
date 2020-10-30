@@ -61,8 +61,11 @@ const Nav = () => {
           }
           { auth0.isAuthenticated() === false &&
           <>
-            <LoginAddActivity />
-            <Login />
+            <span className="top-menu">
+              <LoginAddActivity />
+              <Login />
+            </span>
+            <SideMenu />
           </>
           }
         </div>
