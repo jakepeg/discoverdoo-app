@@ -89,6 +89,16 @@ class ActivityApp extends App {
             margin: 0;
           }
 
+          .bm-burger-button {
+            height: 20px!important;
+            width: 25px!important;
+            margin-top: 5px;
+          }
+
+          .bm-burger-bars {
+            height: 12%!important;
+          }
+
           .base-page {
             background-color: #00BCD4;
             min-height: calc(100vh - 340px);
@@ -222,7 +232,7 @@ class ActivityApp extends App {
           }
 
           .react-select-container {
-            margin: 20px 0 20px 15px;
+            margin: 40px 0 40px 15px;
           }
 
           .react-select-container:focus {
@@ -249,7 +259,7 @@ class ActivityApp extends App {
             }
 
             .react-select-container {
-              margin: auto;
+              margin: 40px auto;
             }
           }
 
@@ -436,11 +446,13 @@ class ActivityApp extends App {
           display: none;
         }
 
+        .top-menu {
+          display: block;
+        }
+
         .contain {
-          width: 100%;
+          margin: 0 auto;
           max-width: 1140px;
-          margin-right: auto;
-          margin-left: auto;
         }
 
         .rowz {
@@ -459,8 +471,6 @@ class ActivityApp extends App {
           }
 
           .contain {
-            width: 100%;
-            max-width: 1140px;
             padding-right: 20px;
             padding-left: 20px;
           }
@@ -488,6 +498,10 @@ class ActivityApp extends App {
 
           .bm-burger-button {
             display: block;
+          }
+
+          .top-menu {
+            display: none;
           }
 
           .loggedin {

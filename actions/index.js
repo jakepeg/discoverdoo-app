@@ -40,12 +40,21 @@ const BASE_URL = process.env.BASE_URL;
 export const CATEGORY_LIST = [
   {value: 'c-00', label: 'All activities'},
   {value: 'c-01', label: 'Academic'},
-  {value: 'c-02', label: 'Arts and crafts'},
+  {value: 'c-02', label: 'Art & Crafts'},
   {value: 'c-03', label: 'Cooking'},
   {value: 'c-04', label: 'Games'},
-  {value: 'c-05', label: 'Music and dance'},
-  {value: 'c-06', label: 'Outdoor'},
-  {value: 'c-07', label: 'Sport and fitness'}
+  {value: 'c-05', label: 'Performing Arts'},
+  // {value: 'c-06', label: 'Outdoor'},
+  {value: 'c-07', label: 'Sport & Fitness'}
+]
+
+export const CATEGORY_INFO = [
+  {title: 'Academic', icon: 'v1603379623/academic-2-icon_cmqy0e.svg', tagline: 'academic and cultural', image: 'c_lpad,h_442,q_auto:best,w_550/v1603978229/academic-2_ismvtb.png'},
+  {title: 'Arty', icon: 'v1603354032/art-craft-icon_s1afxl.svg', tagline: 'art and craft', image: 'c_lpad,h_442,q_auto:best,w_550/v1604042890/arty-2_wtcf9u.png'},
+  {title: 'Foody', icon: 'v1603354032/cooking-icon_jxqnqa.svg', tagline: 'cooking and baking', image: 'c_lpad,h_442,q_auto:best,w_550/v1603979286/foody_zunytj.png'},
+  {title: 'Gamer', icon: 'v1603354032/games-icon_kxite2.svg', tagline: 'game and esports', image: 'c_lpad,h_442,q_auto:best,w_550/v1604043832/gamer_uuenjf.png'},
+  {title: 'Performer', icon: 'v1603354032/performing-arts-icon_l36asc.svg', tagline: 'music and dance', image: 'c_lpad,h_442,q_auto:best,w_550/v1604044131/performer_yeffh5.png'},
+  {title: 'Sporty', icon: 'v1603434546/sport-fitness-2-icon_whusrj.svg', tagline: 'sport and fitness', image: 'c_lpad,h_442,q_auto:best,w_550/v1604047598/sporty_xjku8t.png'}
 ]
 
 export const getCategories = () => {
@@ -58,7 +67,7 @@ export const getCategories = () => {
 }
 
 export const getActivities = () => {
-  console.log(`${BASE_URL}/api/v1/activities`)
+  // console.log(`${BASE_URL}/api/v1/activities`)
   return axios.get(`${BASE_URL}/api/v1/activities`).then(res => res.data)
 }
 
@@ -66,12 +75,18 @@ export const createActivity = (activity) => {
   // activity.id = Math.random().toString(36).substr(2, 7)
   activity.id = slugify(activity.name)
   activity.promoted = false
+  console.log(BASE_URL)
   return axios.post(`${BASE_URL}/api/v1/activities`, activity).then(res => res.data)
 }
 
 export const getActivityById = (id) => {
-  console.log(id)
+  // console.log(id)
   return axios.get(`${BASE_URL}/api/v1/activities/${id}`).then(res => res.data)
+}
+
+export const getActivitiesByCategory = (cat) => {
+  console.log(cat)
+  return axios.get(`${BASE_URL}/api/v1/activitiesByCategory/${cat}`).then(res => res.data)
 }
 
 export const updateActivity = (activity) => {

@@ -16,7 +16,7 @@ const Filter = (props) => {
       classNamePrefix="react-select"
       onChange={onChange}
       options={CATEGORY_LIST}
-      placeholder="Discover fun activities"
+      placeholder="Our Top Picks"
       isSearchable={false}
     />
   );

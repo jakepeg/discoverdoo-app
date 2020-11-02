@@ -321,12 +321,11 @@ const Create = (props) => {
           id="category"
           name="category">
             <option>Academic</option>
-            <option>Arts and crafts</option>
-            <option>Cooking</option>
-            <option>Games</option>
-            <option>Music and dance</option>
-            <option>Outdoor</option>
-            <option>Sport and fitness</option>
+            <option>Arty</option>
+            <option>Foody</option>
+            <option>Gamer</option>
+            <option>Performer</option>
+            <option>Sporty</option>
           </select>
           { categoryError ? (
             <div className="form-error">select a category</div>

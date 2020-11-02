@@ -48,14 +48,38 @@ var styles = {
   }
 }
 
-const SideMenu = () => (
+const SideMenu = () => {
 
+
+  return (
+
+    <>
+
+{ auth0.isAuthenticated() &&
   <Menu className="burger" right styles={ styles }>
         <a className="menu-item" href="/">Home</a>
         <a className="menu-item" href="/create">Add activity</a>
         <a className="menu-item" href="/my-activities">My activities</a>
         <a className="menu-item" onClick={auth0.logout}>Logout</a>
   </Menu>
-);
+
+  }
+
+
+
+
+{ auth0.isAuthenticated() === false &&
+<Menu className="burger" right styles={ styles }>
+<a className="menu-item" href="/">Home</a>
+<a className="menu-item" onClick={auth0.loginAddActivity}>Add activity</a>
+<a className="menu-item" onClick={auth0.login}>Sign in</a>
+</Menu>
+
+  }
+
+</>
+  )
+
+};
 
 export default SideMenu;

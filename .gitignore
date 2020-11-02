@@ -1,1 +1,3 @@
-node_modules
+/node_modules
+/out_publish/
+/out_functions/
