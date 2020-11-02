@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "postbuild": "next-on-netlify"
+    "start": "next start"
   },
   "dependencies": {
     "auth0-js": "^9.8.1",
