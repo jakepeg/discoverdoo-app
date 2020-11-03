@@ -3,6 +3,7 @@ import Head from 'next/head'
 import CookieConsent from "react-cookie-consent";
 import Nav from '../components/nav2'
 import Footer from '../components/footer'
+import './empty.css'
 
 class ActivityApp extends App {
 
@@ -105,6 +106,7 @@ class ActivityApp extends App {
             position: relative;
             z-index: 1;
             margin-bottom: 0px;
+
           }
 
           footer {
@@ -333,6 +335,7 @@ class ActivityApp extends App {
           background: #fff;
           box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
           margin-bottom: 60px;
+          margin-top: 60px;
         }
 
         .card-header {

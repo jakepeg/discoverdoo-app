@@ -80,6 +80,7 @@ const Nav = () => {
           display: flex;
           justify-content: space-between;
           padding-top: 15px;
+          padding-bottom: 20px;
         }
 
         .menu {

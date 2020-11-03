@@ -6,7 +6,7 @@ const Hero = () => {
     <div className="hero">
       <div className="contain hero-section">
         <div className="hero-copy">
-          <h1>Discover online <br />activity progams <br />for kids</h1>
+          <h1>Discover online <br />activity progams <br />for kids to doo</h1>
         </div>
         <div className="hero-image">
           <img className="image" src={`https://res.cloudinary.com/jakepeg/image/upload/c_scale,q_auto:best,w_550/v1603875618/yoga-hq_hxt0op.png`} alt="yoga girl" />
