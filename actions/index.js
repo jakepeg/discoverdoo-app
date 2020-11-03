@@ -49,7 +49,7 @@ export const CATEGORY_LIST = [
 ]
 
 export const CATEGORY_INFO = [
-  {title: 'Academic', icon: 'v1603379623/academic-2-icon_cmqy0e.svg', tagline: 'academic and cultural', image: 'c_lpad,h_442,q_auto:best,w_550/v1603978229/academic-2_ismvtb.png'},
+  {title: 'Academic', icon: 'v1603379623/academic-2-icon_cmqy0e.svg', tagline: 'educational', image: 'c_lpad,h_442,q_auto:best,w_550/v1603978229/academic-2_ismvtb.png'},
   {title: 'Arty', icon: 'v1603354032/art-craft-icon_s1afxl.svg', tagline: 'art and craft', image: 'c_lpad,h_442,q_auto:best,w_550/v1604042890/arty-2_wtcf9u.png'},
   {title: 'Foody', icon: 'v1603354032/cooking-icon_jxqnqa.svg', tagline: 'cooking and baking', image: 'c_lpad,h_442,q_auto:best,w_550/v1603979286/foody_zunytj.png'},
   {title: 'Gamer', icon: 'v1603354032/games-icon_kxite2.svg', tagline: 'game and esports', image: 'c_lpad,h_442,q_auto:best,w_550/v1604043832/gamer_uuenjf.png'},

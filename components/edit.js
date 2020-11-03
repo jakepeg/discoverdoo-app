@@ -334,14 +334,17 @@ const Edit = (props) => {
           <label htmlFor="medium">Channel</label>
           <select 
           onChange={handleMediumChange}
-          value={[form.medium]}
-          multiple 
+          required
+          defaultValue={'default'}
           className="form-control" 
           id="medium"
           name="medium">
+            <option value="default" disabled>Select an option</option>
             <option>Website</option>
             <option>Youtube</option>
             <option>App</option>
+            <option>Livestream</option>
+            <option>Podcast</option>
           </select>
           { mediumError ? (
             <div className="form-error">select a channel</div>

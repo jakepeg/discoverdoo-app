@@ -42,7 +42,7 @@ const Home = (props) => {
         </div>
         <ActivityList 
         activities={filterActivities(props.activities) || []} 
-        title="Top Picks"
+        title="Featured"
         />
       </div>
     </>

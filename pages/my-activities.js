@@ -22,9 +22,11 @@ const MyActivities = (props) => {
         { auth0.isAuthenticated() &&
       <>
           <div className="rowz">
-            <h3>My activities</h3>
           </div>
-          <ActivityList activities={filterActivities(props.activities) || []} />
+          <ActivityList 
+          activities={filterActivities(props.activities) || []}
+          title="My"
+          />
       </>
         }
         { auth0.isAuthenticated() === false &&
