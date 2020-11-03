@@ -18,7 +18,6 @@ const Create = (props) => {
     userId: Cookies.get('sub')
   }
 
-  // const formData = defaultData
   const formData = props.initialData ? {...props.initialData} : defaultData
   const [form, setForm] = useState(formData)
 
@@ -75,7 +74,6 @@ const Create = (props) => {
   const handleChange = (event) => {
     const target = event.target
     const name = target.name
-
     setForm({
       ...form,
       [name]: target.value
@@ -87,7 +85,6 @@ const Create = (props) => {
     const name = target.name
     const cleanWebsite = target.value.replace('https://','').replace('http://','');
     console.log(target)
-
     setForm({
       ...form,
       [name]: cleanWebsite
@@ -154,39 +151,29 @@ const Create = (props) => {
       )
       const file = await res.json()
       const newFileName = file.public_id + '.' + file.format
-  // console.log(file)
-      // setImage(file.secure_url)
-
       setImage(newFileName)
       setLoading(false)
       setForm({
         ...form,
         image: newFileName
-        // image: file.public_id
       })
     }
 
   return (
-
-<>
+  <>
     <div className="contain top-space">
       <div className="details-card">
         <div className="card-header">
-          
           <a href="/" id="back-btn">
             <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
             <span className="back">BACK</span>
           </a>
         </div>
-
         <div className="form-card-content">
-
         <h1>Add an activity</h1>
-        
     <form>
     <div className="add-activity-form">
       <div className="form-col">
-
         <div className="form-group">
           <label htmlFor="name">Name</label>
           <input 
@@ -203,7 +190,6 @@ const Create = (props) => {
             <div className="form-error">enter a name</div>
           ) : null }
         </div>
-
         <div className="form-group">
           <label htmlFor="ageFrom">Age from</label>
           <input 
@@ -219,7 +205,6 @@ const Create = (props) => {
             <div className="form-error">enter age from</div>
           ) : null }
         </div>
-
         <div className="form-group">
           <label htmlFor="ageTo">Age to</label>
           <input 
@@ -235,7 +220,6 @@ const Create = (props) => {
             <div className="form-error">enter age to</div>
           ) : null }
         </div>
-
         <div className="form-group">
           <label htmlFor="price">Price</label>
           <input 
@@ -251,7 +235,6 @@ const Create = (props) => {
             <div className="form-error">enter a price</div>
           ) : null }
         </div>
-
         <div className="form-group">
           <label htmlFor="website">Website</label>
           <input 
@@ -267,7 +250,6 @@ const Create = (props) => {
             <div className="form-error">enter website</div>
           ) : null }
         </div>
-
         <div className="form-group">
           <label htmlFor="file">Image</label>
           <input 
@@ -285,7 +267,6 @@ const Create = (props) => {
           id="userId" 
           name="userId" />
         </div>
-
         <div className="form-group">
           {loading ? (
             <h3>LOADING IMAGE...</h3>
@@ -295,7 +276,6 @@ const Create = (props) => {
         </div>
       </div>
       <div className="form-col">
-
       <div className="form-group">
           <label htmlFor="description">Description</label>
           <textarea 
@@ -310,7 +290,6 @@ const Create = (props) => {
             <div className="form-error">enter a description</div>
           ) : null }
         </div>
-
         <div className="form-group">
           <label htmlFor="category">Category</label>
           <select 
@@ -331,37 +310,35 @@ const Create = (props) => {
             <div className="form-error">select a category</div>
           ) : null }
         </div>
-
         <div className="form-group">
           <label htmlFor="medium">Channel</label>
           <select 
           onChange={handleMediumChange}
-          multiple 
           required
+          defaultValue={'default'}
           className="form-control" 
           id="medium"
           name="medium">
+            <option value="default" disabled>Select an option</option>
             <option>Website</option>
             <option>Youtube</option>
             <option>App</option>
+            <option>Livestream</option>
+            <option>Podcast</option>
           </select>
           { mediumError ? (
             <div className="form-error">select a channel</div>
           ) : null }
         </div>
-
       </div>
       </div>
-
       <button 
           onClick={submitForm} 
           type="button" 
           className="btn btn-primary">
           Add Activity
       </button>
-
     </form>
-
 </div>
 
 </div>
@@ -390,7 +367,6 @@ const Create = (props) => {
 
     .form-group {
       display: flex;
-
     }
 
     .form-error {
@@ -433,11 +409,11 @@ const Create = (props) => {
     }
 
     #category {
-      height: 155px;
+      height: 135px;
     }
 
     #medium {
-      height: 80px;
+      height: 40px;
     }
 
   `}</style>

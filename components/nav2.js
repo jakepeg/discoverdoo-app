@@ -86,7 +86,7 @@ const Nav = () => {
         .menu {
           display: flex;
           justify-content: flex-end;
-          width: 280px;
+          width: 450px;
           margin-top: 4px;
         }
 

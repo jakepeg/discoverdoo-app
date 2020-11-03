@@ -26,12 +26,12 @@ const DetailPage = (props) => {
           <div className="card-header">
             
 
-            <Link href="/">
-            <a id="back-btn">
+
+            <a id="back-btn" onClick={() => router.back()}>
               <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
               <span className="back">BACK</span>
             </a>
-           </Link>
+
 
 
           </div>

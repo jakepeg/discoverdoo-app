@@ -106,6 +106,14 @@ const ActivityList = (props) => {
           color: FireBrick;
         }
 
+        .Podcast {
+          color: DarkMagenta;
+        }
+
+        .Livestream {
+          color: DarkSlateBlue;
+        }
+
         @media (max-width: 1130px) {
           .card-grid {
             grid-template-columns: repeat(2, 350px);
