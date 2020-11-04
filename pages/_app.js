@@ -6,7 +6,6 @@ import Footer from '../components/footer'
 import './empty.css'
 
 class ActivityApp extends App {
-
   static async getInitialProps(appContext) {
     console.log(process.env.CLIENT_URL)
     const appProps = await App.getInitialProps(appContext)
