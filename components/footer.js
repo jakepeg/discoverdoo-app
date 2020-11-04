@@ -14,11 +14,9 @@ const Footer = () => {
 
     <div className="footer-content">
 
-      <h3>Websites, Apps, Podcasts, Livestreams and Youtube Channels to keep kids active</h3>
-
+      <h3>Websites, Apps, Podcasts, Live Streams and Youtube Channels to keep kids active</h3>
 
       <h4>Share DiscoverDoo</h4>
-
 
       <FacebookShareButton
               className="social-icons"

@@ -72,8 +72,14 @@ const CategoryButtons = () => {
         /* for phones only */
         @media (max-width: 768px) {
           .category-buttons {
-            grid-template-columns: repeat(3, 140px);
+            grid-template-columns: repeat(3, 120px);
             justify-content: space-evenly;
+            margin: 40px 0 0 0;
+          }
+
+          .category-button {
+            width: 120px;
+            margin-bottom: 15px;
           }
         }
 
