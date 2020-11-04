@@ -119,7 +119,7 @@ class ActivityApp extends App {
           }
 
           .footer-content {
-            padding: 30px;
+            padding: 30px 50px;
           }
 
           button {
@@ -187,40 +187,31 @@ class ActivityApp extends App {
           .divider-color         { border-color: #B6B6B6; }
           .pink                  { color: #E94969; }
 
+          h1, h2, h3, h4 {
+            font-family: Verdana, Geneva, sans-serif;
+          }
+
           h1 {
             font-size: 2rem;
-            font-family: "Helvetica", "Arial", sans-serif;
-            font-weight: 300;
-            line-height: 1;
-            letter-spacing: 0em;
+            font-weight: 600;
             color: rgb(0, 0, 0, 0.8);
           }
 
           h2 {
-            font-size: 1.5rem;
-            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 1.2rem;
             font-weight: 400;
-            line-height: 1;
-            letter-spacing: 0em;
             color: rgb(0, 0, 0, 0.8);
           }
 
           h3 {
-            font-size: 2rem;
-            font-family: "Helvetica", "Arial", sans-serif;
+            font-size: 1.5rem;
             font-weight: 300;
-            line-height: 1;
-            letter-spacing: 0em;
             color: white;
-            margin-left: 20px;
           }
 
           h4 {
             font-size: 1.2rem;
-            font-family: "Helvetica", "Arial", sans-serif;
             font-weight: 300;
-            line-height: 1;
-            letter-spacing: 0em;
             color: white;
           }
 
@@ -267,7 +258,6 @@ class ActivityApp extends App {
 
           .react-select__control--is-focused {
             box-shadow: none!important;
-
           }
 
           .react-select__placeholder, 
@@ -485,7 +475,7 @@ class ActivityApp extends App {
           }
 
           .footer-content {
-            padding: 0;
+            padding: 40px;
           }
 
         }
@@ -512,7 +502,7 @@ class ActivityApp extends App {
           }
 
           .footer-content {
-            padding: 0;
+            padding: 60px;
           }
         }
 
