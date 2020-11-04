@@ -51,7 +51,7 @@ const Nav = () => {
       <div className="menu">
           { auth0.isAuthenticated() &&
           <>
-          <div className="loggedin">
+          <div className="loggedin top-menu">
             <AddActivity />
             <MyActivities />
             <Logout />
