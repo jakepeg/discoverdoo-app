@@ -68,13 +68,14 @@ const Hero2 = (props) => {
 
           .hero-copy {
             max-width: 100%;
-            margin-top: 40px;
+            margin-top: 10px;
           }
 
           .hero-copy h1 {
             line-height: 45px;
             font-size: 2rem;
             text-align: center;
+            line-height: 38px;
           }
 
         }

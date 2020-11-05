@@ -62,7 +62,7 @@ const Hero = () => {
 
           .hero-copy {
             max-width: 100%;
-            margin-top: 40px;
+            margin-top: 20px;
           }
 
           .hero-copy h1 {

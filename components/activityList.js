@@ -129,6 +129,11 @@ const ActivityList = (props) => {
             grid-template-columns: repeat(1, 350px);
             justify-content: space-around;
           }
+
+          .card-grid-title {
+            font-size: 1.8rem;
+            text-align: center;
+          }
         }
 
       `}</style>

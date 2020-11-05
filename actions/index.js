@@ -50,11 +50,11 @@ export const CATEGORY_LIST = [
 
 export const CATEGORY_INFO = [
   {title: 'Academic', icon: 'v1603379623/academic-2-icon_cmqy0e.svg', tagline: 'educational', image: 'c_lpad,h_442,q_auto:best,w_550/v1603978229/academic-2_ismvtb.png'},
-  {title: 'Arty', icon: 'v1603354032/art-craft-icon_s1afxl.svg', tagline: 'art and craft', image: 'c_lpad,h_442,q_auto:best,w_550/v1604042890/arty-2_wtcf9u.png'},
-  {title: 'Foody', icon: 'v1603354032/cooking-icon_jxqnqa.svg', tagline: 'cooking and baking', image: 'c_lpad,h_442,q_auto:best,w_550/v1603979286/foody_zunytj.png'},
-  {title: 'Gamer', icon: 'v1603354032/games-icon_kxite2.svg', tagline: 'game and esports', image: 'c_lpad,h_442,q_auto:best,w_550/v1604043832/gamer_uuenjf.png'},
-  {title: 'Performer', icon: 'v1603354032/performing-arts-icon_l36asc.svg', tagline: 'music and dance', image: 'c_lpad,h_442,q_auto:best,w_550/v1604044131/performer_yeffh5.png'},
-  {title: 'Sporty', icon: 'v1603434546/sport-fitness-2-icon_whusrj.svg', tagline: 'sport and fitness', image: 'c_lpad,h_442,q_auto:best,w_550/v1604047598/sporty_xjku8t.png'}
+  {title: 'Arty', icon: 'v1603354032/art-craft-icon_s1afxl.svg', tagline: 'art & craft', image: 'c_lpad,h_442,q_auto:best,w_550/v1604042890/arty-2_wtcf9u.png'},
+  {title: 'Foody', icon: 'v1603354032/cooking-icon_jxqnqa.svg', tagline: 'cooking & baking', image: 'c_lpad,h_442,q_auto:best,w_550/v1603979286/foody_zunytj.png'},
+  {title: 'Gamer', icon: 'v1603354032/games-icon_kxite2.svg', tagline: 'game & esports', image: 'c_lpad,h_442,q_auto:best,w_550/v1604043832/gamer_uuenjf.png'},
+  {title: 'Performer', icon: 'v1603354032/performing-arts-icon_l36asc.svg', tagline: 'music & dance', image: 'c_lpad,h_442,q_auto:best,w_550/v1604044131/performer_yeffh5.png'},
+  {title: 'Sporty', icon: 'v1603434546/sport-fitness-2-icon_whusrj.svg', tagline: 'sport & fitness', image: 'c_lpad,h_442,q_auto:best,w_550/v1604047598/sporty_xjku8t.png'}
 ]
 
 export const getCategories = () => {
