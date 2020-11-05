@@ -40,11 +40,11 @@ const ActivityList = (props) => {
 
         .card-grid-title {
           font-size: 2rem;
-          font-family: "Helvetica", "Arial", sans-serif;
+          font-family: 'Paytone One', sans-serif;
           font-weight: 600;
           line-height: 1;
           letter-spacing: 0em;
-          color: #0b334d;
+          color: #ffffff;
         }
 
         .card-grid {

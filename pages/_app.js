@@ -186,8 +186,8 @@ class ActivityApp extends App {
           .divider-color         { border-color: #B6B6B6; }
           .pink                  { color: #E94969; }
 
-          h1, h2, h3, h4 {
-            font-family: Verdana, Geneva, sans-serif;
+          h1, h2 {
+            font-family: 'Paytone One', sans-serif;
           }
 
           h1 {

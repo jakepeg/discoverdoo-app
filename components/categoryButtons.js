@@ -40,6 +40,7 @@ const CategoryButtons = () => {
         }
 
         .category-button h3 {
+          font-family: 'Paytone One', sans-serif;
           color: #0b334d;
           font-size: 1rem;
           font-weight: 600;

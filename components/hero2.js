@@ -32,9 +32,7 @@ const Hero2 = (props) => {
 
         .hero-copy h1 {
           color: #ffffff;
-          letter-spacing: 2px;
-          font-weight: 600;
-          font-family: Verdana, Geneva, sans-serif;
+          letter-spacing: 4px;
         }
 
         .image {
