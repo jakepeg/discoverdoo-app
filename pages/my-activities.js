@@ -1,16 +1,17 @@
+import React, { useState, useEffect } from 'react'
 import ActivityList from '../components/activityList'
-import { getActivities } from '../actions'
+import { getMyActivities } from '../actions'
 import auth0 from '../services/auth0'
 import Cookies from 'js-cookie'
 import Head from 'next/head'
 
-const MyActivities = (props) => {
+const MyActivities = () => {
 
-  const filterActivities = activities => {
-    return activities.filter((a) => {
-      return a.userId && a.userId.includes(Cookies.get('sub'))
-    })
-  }
+  const [activities, setActivities] = useState([]);
+
+  useEffect(()=>{
+    getMyActivities(Cookies.get('sub')).then(data => setActivities(data))
+   },[])
 
   return (
     <>
@@ -24,7 +25,7 @@ const MyActivities = (props) => {
           <div className="rowz">
           </div>
           <ActivityList 
-          activities={filterActivities(props.activities) || []}
+          activities={activities}
           title="My"
           />
       </>
@@ -38,12 +39,5 @@ const MyActivities = (props) => {
     </>
   )
 }
-
-MyActivities.getInitialProps = async () => {
-    const activities = await getActivities()
-    return {
-      activities
-    }
-  }
 
 export default MyActivities

@@ -192,6 +192,7 @@ const Edit = (props) => {
           <label htmlFor="name">Name</label>
           <input 
           onChange={handleChange}
+          maxlength="30"
           value={form.name}
           type="text" 
           className="form-control" 
@@ -436,7 +437,7 @@ const Edit = (props) => {
     }
 
     #medium {
-      height: 80px;
+      height: 40px;
     }
 
     .remove-image {
