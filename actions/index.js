@@ -22,6 +22,15 @@ export const CATEGORY_INFO = [
   {title: 'Sporty', icon: 'v1603434546/sport-fitness-2-icon_whusrj.svg', tagline: 'sport & fitness', image: 'c_lpad,h_442,q_auto:best,w_550/v1604047598/sporty_xjku8t.png'}
 ]
 
+export const CATEGORY_OPTIONS = [
+  { value: 'Academic', label: 'Academic' },
+  { value: 'Arty', label: 'Arty' },
+  { value: 'Foody', label: 'Foody' },
+  { value: 'Gamer', label: 'Gamer' },
+  { value: 'Performer', label: 'Performer' },
+  { value: 'Sporty', label: 'Sporty' }
+]
+
 export const getCategories = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -57,6 +66,7 @@ export const getActivitiesByCategory = (cat) => {
 }
 
 export const updateActivity = (activity) => {
+  console.log(activity)
   activity.id = slugify(activity.name)
   return axios.patch(`${BASE_URL}/api/v1/activities/${activity._id}`, activity)
   .then(res => res.data)

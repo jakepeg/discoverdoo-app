@@ -6,7 +6,7 @@ const CategoryButtons = () => {
 
   return (
     <div className="category-buttons contain">
-
+{/* <h2 className="title">Browse Categories</h2> */}
       { CATEGORY_INFO.map(category => (
         <div key={category.title}>
           <Link href="/activities/[id]" as={`/activities/${category.title}`}>

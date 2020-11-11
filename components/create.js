@@ -1,7 +1,26 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { createActivity } from '../actions'
+import { createActivity, CATEGORY_OPTIONS } from '../actions'
 import Cookies from 'js-cookie'
+import Select from 'react-select'
+
+const selectStyles = {
+  menu: () => ({
+    width: 300,
+    border: '1px solid #999',
+    color: '#000000',
+    padding: 12,
+    marginBottom: 15
+  }),
+
+  control: () => ({
+    width: 300,
+  }),
+
+  indicatorsContainer: () => ({
+    display: 'none',
+  }),
+}
 
 const Create = (props) => {
 
@@ -91,17 +110,13 @@ const Create = (props) => {
     })
   }
 
-  const handleCategoryChange = (event) => {
-    const { options } = event.target
-    const optionsLength = options.length
+  const onSelectChange = (e) => {
     let value = []
-
-    for (let i = 0; i < optionsLength; i++) {
-      if (options[i].selected) {
-        value.push(options[i].value)
-      }
+    if (e != null) {
+      value = Array.from(e, option => option.value);
+    } else {
+      value = []
     }
-
     setForm({
       ...form,
       category: value.toString()
@@ -134,30 +149,30 @@ const Create = (props) => {
     }
   }
 
-    const [image, setImage] = useState('doozone/tzgl9kjalula4brx0irl.png')
-    const [loading, setLoading] = useState(false)
-    const uploadImage = async e => {
-      const files = e.target.files
-      const data = new FormData()
-      data.append('file', files[0])
-      data.append('upload_preset', 'doozone')
-      setLoading(true)
-      const res = await fetch(
-        'https://api.cloudinary.com/v1_1/jakepeg/image/upload',
-        {
-          method: 'POST',
-          body: data
-        }
-      )
-      const file = await res.json()
-      const newFileName = file.public_id + '.' + file.format
-      setImage(newFileName)
-      setLoading(false)
-      setForm({
-        ...form,
-        image: newFileName
-      })
-    }
+  const [image, setImage] = useState('doozone/tzgl9kjalula4brx0irl.png')
+  const [loading, setLoading] = useState(false)
+  const uploadImage = async e => {
+    const files = e.target.files
+    const data = new FormData()
+    data.append('file', files[0])
+    data.append('upload_preset', 'doozone')
+    setLoading(true)
+    const res = await fetch(
+      'https://api.cloudinary.com/v1_1/jakepeg/image/upload',
+      {
+        method: 'POST',
+        body: data
+      }
+    )
+    const file = await res.json()
+    const newFileName = file.public_id + '.' + file.format
+    setImage(newFileName)
+    setLoading(false)
+    setForm({
+      ...form,
+      image: newFileName
+    })
+  }
 
   return (
   <>
@@ -292,20 +307,16 @@ const Create = (props) => {
         </div>
         <div className="form-group">
           <label htmlFor="category">Category</label>
-          <select 
-          onChange={handleCategoryChange}
-          multiple 
-          required
-          className="form-control" 
-          id="category"
-          name="category">
-            <option>Academic</option>
-            <option>Arty</option>
-            <option>Foody</option>
-            <option>Gamer</option>
-            <option>Performer</option>
-            <option>Sporty</option>
-          </select>
+          <Select
+            isMulti
+            menuIsOpen
+            name="colors"
+            options={CATEGORY_OPTIONS}
+            placeholder="Select.."
+            styles={selectStyles}
+            classNamePrefix="select"
+            onChange={onSelectChange}
+          />
           { categoryError ? (
             <div className="form-error">select a category</div>
           ) : null }

@@ -5,6 +5,14 @@ import LazyLoad from 'react-lazyload'
 const ActivityList = (props) => {
   const { activities } = props
 
+  function truncateString(str) {
+    if (str.length > 18) {
+      return str.slice(0, 18) + "..";
+    } else {
+      return str;
+    }
+  }
+
   return (
     <>
     <h2 className="card-grid-title">{props.title} activities</h2>
@@ -20,7 +28,7 @@ const ActivityList = (props) => {
                     <h2>{activity.name}</h2>
                     <div className="card-footer">
                       <div className="age-range">{'age ' + activity.ageFrom + ' - ' + activity.ageTo}</div>
-                      <div className="location">{activity.category} - <span className={activity.medium}>{activity.medium}</span></div>
+                      <div className="location">{truncateString(activity.category)} - <span className={activity.medium}>{activity.medium}</span></div>
                     </div>
                   </div>
                 </div>
@@ -33,7 +41,6 @@ const ActivityList = (props) => {
       }
       </div>
       <style jsx>{`
-
         .nounderline {
           text-decoration: none;
         }
@@ -135,7 +142,6 @@ const ActivityList = (props) => {
             text-align: center;
           }
         }
-
       `}</style>
     </>
   )
