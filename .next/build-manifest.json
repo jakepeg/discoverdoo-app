@@ -27,10 +27,6 @@
     "/activity/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
-    ],
-    "/activity/[id]/edit": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
     ]
   }
 }
