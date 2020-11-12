@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router'
+import Head from 'next/head'
 import { getActivitiesByCategory } from '../../../actions'
 import ActivityList from '../../../components/activityList'
 import CategoryButtons from '../../../components/categoryButtons'
@@ -12,6 +13,10 @@ const CategoryPage = (props) => {
 
   return (
     <>
+      <Head>
+        <title>Discover {cat} activities</title>
+        <meta name="title" content={`Discover ${cat} activities`} />
+      </Head>
       <Hero2
         title={cat} 
       />

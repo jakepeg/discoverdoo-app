@@ -19,18 +19,18 @@ class ActivityApp extends App {
         <Head>
           {/* <title>DiscoverDoo fun finder</title> */}
           {/* <meta name="title" content="DiscoverDoo fun finder" /> */}
-          <meta name="description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
+          <meta name="description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and academically. " />
           {/* Open Graph / Facebook */}
           <meta property="og:type" content="website" />
           <meta property="og:url" content="https://www.discoverdoo.com/" />
           <meta property="og:title" content="DiscoverDoo fun finder" />
-          <meta property="og:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
+          <meta property="og:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and academically. " />
           <meta property="og:image" content="https://cl.ly/cad938ecc38d/poster.png" />
           {/* Twitter */}
           <meta property="twitter:card" content="summary_large_image" />
           <meta property="twitter:url" content="https://www.discoverdoo.com/" />
           <meta property="twitter:title" content="DiscoverDoo fun finder" />
-          <meta property="twitter:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and accademically. " />
+          <meta property="twitter:description" content="DiscoverDoo is a currated list of Websites, Apps and Youtube Channels that help keep kids active - creatively, physically and academically. " />
           <meta property="twitter:image" content="https://cl.ly/cad938ecc38d/poster.png" />
 
           <link
