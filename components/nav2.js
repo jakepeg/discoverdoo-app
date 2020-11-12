@@ -107,7 +107,7 @@ const Nav = () => {
           color: white;
           font-size: 1.1rem;
           font-weight: 400;
-          margin-top: 12px;
+          margin-top: 10px;
           font-family: sans-serif;
           letter-spacing: 1px;
         }

@@ -164,8 +164,16 @@ class ActivityApp extends App {
             font-family: 'Paytone One', sans-serif;
             color: #ffffff;
             font-size: 1.2rem;
-            margin-left: 15px;
+            padding: 5px 15px;
             cursor: pointer;
+            transition: 0.5s;
+            border-radius: 6px;
+          }
+
+          .nav-link :hover {
+            color: #0b334d;
+            margin-top: -5px;
+            background-color: white;
           }
 
           .top-space {
