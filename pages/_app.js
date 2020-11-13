@@ -499,6 +499,10 @@ class ActivityApp extends App {
             display: none;
           }
 
+          .back-link {
+            display: none;
+          }
+
           .loggedin {
             display: none;
           }

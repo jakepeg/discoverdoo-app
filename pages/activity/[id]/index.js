@@ -25,9 +25,9 @@ const DetailPage = (props) => {
         <div className="details-card">
           <div className="card-header">
             
+          <h1>{activity.name}</h1>
 
-
-            <a id="back-btn" onClick={() => router.back()}>
+            <a className="back-link" id="back-btn" onClick={() => router.back()}>
               <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
               <span className="back">BACK</span>
             </a>
@@ -39,7 +39,7 @@ const DetailPage = (props) => {
           <div className="card-content">
 
             <div className="info-section">
-              <h1>{activity.name}</h1>
+              
               <p className="description">{ activity.description }</p>
 
               {activity.ageFrom.length > 0 &&
