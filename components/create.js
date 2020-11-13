@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import { createActivity, CATEGORY_OPTIONS } from '../actions'
+import { createActivity, CATEGORY_OPTIONS, MEDIUM_OPTIONS } from '../actions'
 import Cookies from 'js-cookie'
 import Select from 'react-select'
 
@@ -110,7 +110,7 @@ const Create = (props) => {
     })
   }
 
-  const onSelectChange = (e) => {
+  const handleCategoryChange = (e) => {
     let value = []
     if (e != null) {
       value = Array.from(e, option => option.value);
@@ -123,15 +123,13 @@ const Create = (props) => {
     })
   }
 
-  const handleMediumChange = (event) => {
-    const { options } = event.target
-    const optionsLength = options.length
+  const handleMediumChange = (e) => {
     let value = []
-
-    for (let i = 0; i < optionsLength; i++) {
-      if (options[i].selected) {
-        value.push(options[i].value)
-      }
+    if (e != null) {
+      value = Array.from(e, option => option.value);
+      console.log(form.category)
+    } else {
+      value = []
     }
 
     setForm({
@@ -315,7 +313,7 @@ const Create = (props) => {
             placeholder="Select.."
             styles={selectStyles}
             classNamePrefix="select"
-            onChange={onSelectChange}
+            onChange={handleCategoryChange}
           />
           { categoryError ? (
             <div className="form-error">select a category</div>
@@ -323,20 +321,16 @@ const Create = (props) => {
         </div>
         <div className="form-group">
           <label htmlFor="medium">Channel</label>
-          <select 
-          onChange={handleMediumChange}
-          required
-          defaultValue={'default'}
-          className="form-control" 
-          id="medium"
-          name="medium">
-            <option value="default" disabled>Select an option</option>
-            <option>Website</option>
-            <option>Youtube</option>
-            <option>App</option>
-            <option>Livestream</option>
-            <option>Podcast</option>
-          </select>
+          <Select
+            isMulti
+            menuIsOpen
+            name="mediums"
+            options={MEDIUM_OPTIONS}
+            placeholder="Select.."
+            styles={selectStyles}
+            classNamePrefix="select"
+            onChange={handleMediumChange}
+          />
           { mediumError ? (
             <div className="form-error">select a channel</div>
           ) : null }

@@ -28,7 +28,11 @@ const ActivityList = (props) => {
                     <h2>{activity.name}</h2>
                     <div className="card-footer">
                       <div className="age-range">{'age ' + activity.ageFrom + ' - ' + activity.ageTo}</div>
-                      <div className="location">{truncateString(activity.category)} - <span className={activity.medium}>{activity.medium}</span></div>
+                      { props.category ? (
+                        <div className="location"><span className={truncateString(activity.medium)}>{activity.medium}</span></div> 
+                        ) : 
+                        <div className="location">{truncateString(activity.category)}</div>
+                      }
                     </div>
                   </div>
                 </div>

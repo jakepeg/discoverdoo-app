@@ -25,6 +25,7 @@ const CategoryPage = (props) => {
          <ActivityList 
          activities={props.activities || []} 
          title={cat}  
+         category={true}
          />
       </div>
 

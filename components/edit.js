@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Cookies from 'js-cookie'
 import Select from 'react-select'
-import { CATEGORY_OPTIONS } from '../actions'
+import { CATEGORY_OPTIONS, MEDIUM_OPTIONS } from '../actions'
 
 const selectStyles = {
   menu: () => ({
@@ -117,7 +117,7 @@ const Edit = (props) => {
     catObj.push({ label:element, value: element })
   });
 
-  const onSelectChange = (e) => {
+  const handleCategoryChange = (e) => {
     let value = []
     if (e != null) {
       value = Array.from(e, option => option.value);
@@ -131,15 +131,20 @@ const Edit = (props) => {
     })
   }
 
-  const handleMediumChange = (event) => {
-    const { options } = event.target
-    const optionsLength = options.length
-    let value = []
+  const meds = form.medium
+  const medArray = meds.split(',')
+  let medObj = [];
+  medArray.forEach(function(element) {
+    medObj.push({ label:element, value: element })
+  });
 
-    for (let i = 0; i < optionsLength; i++) {
-      if (options[i].selected) {
-        value.push(options[i].value)
-      }
+  const handleMediumChange = (e) => {
+    let value = []
+    if (e != null) {
+      value = Array.from(e, option => option.value);
+      console.log(form.category)
+    } else {
+      value = []
     }
 
     setForm({
@@ -336,7 +341,7 @@ const Edit = (props) => {
             placeholder="Select.."
             styles={selectStyles}
             classNamePrefix="select"
-            onChange={onSelectChange}
+            onChange={handleCategoryChange}
           />
           { categoryError ? (
             <div className="form-error">select a category</div>
@@ -345,20 +350,17 @@ const Edit = (props) => {
 
         <div className="form-group">
           <label htmlFor="medium">Channel</label>
-          <select 
-          onChange={handleMediumChange}
-          required
-          defaultValue={'default'}
-          className="form-control" 
-          id="medium"
-          name="medium">
-            <option value="default" disabled>Select an option</option>
-            <option>Website</option>
-            <option>Youtube</option>
-            <option>App</option>
-            <option>Livestream</option>
-            <option>Podcast</option>
-          </select>
+          <Select
+            isMulti
+            menuIsOpen
+            name="mediums"
+            options={MEDIUM_OPTIONS}
+            value={medObj}
+            placeholder="Select.."
+            styles={selectStyles}
+            classNamePrefix="select"
+            onChange={handleMediumChange}
+          />
           { mediumError ? (
             <div className="form-error">select a channel</div>
           ) : null }

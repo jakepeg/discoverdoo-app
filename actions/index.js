@@ -31,6 +31,16 @@ export const CATEGORY_OPTIONS = [
   { value: 'Sporty', label: 'Sporty' }
 ]
 
+export const MEDIUM_OPTIONS = [
+  { value: 'Website', label: 'Website' },
+  { value: 'Youtube', label: 'Youtube' },
+  { value: 'App', label: 'App' },
+  { value: 'Livestream', label: 'Livestream' },
+  { value: 'Podcast', label: 'Podcast' }
+]
+
+
+
 export const getCategories = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
