@@ -60,7 +60,7 @@ const DetailPage = (props) => {
               {activity.price.length > 0 &&
                 <span>
                   <p className="info">
-                  <img className="map-icon" align="top" src="/piggy.svg" alt="Right arrow" />
+                  <img className="map-icon" align="top" src="/piggy.svg" alt="Piggybank" />
                   { activity.price }
                   </p>
                 </span>
@@ -80,8 +80,8 @@ const DetailPage = (props) => {
                 <span>
                   <p className="info">
                   <a href={'http://' + activity.website} target="_blank">
-                  <img className="map-icon" align="top" src="/right-arrow.svg" alt="Right arrow" />
-                  Website
+                  <img className="map-icon" align="top" src="/eye.svg" alt="Eye" />
+                  { activity.medium }
                   </a></p>
                 </span>
               }
