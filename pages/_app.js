@@ -441,6 +441,10 @@ class ActivityApp extends App {
           display: none;
         }
 
+        .bm-burger-button {
+          display: none;
+        }
+
         .top-menu {
           display: block;
         }
@@ -491,6 +495,14 @@ class ActivityApp extends App {
             width: 100%;
           }
 
+          .back-link {
+            display: none;
+          }
+
+          .footer-content {
+            padding: 60px;
+          }
+
           .bm-burger-button {
             display: block;
           }
@@ -499,17 +511,6 @@ class ActivityApp extends App {
             display: none;
           }
 
-          .back-link {
-            display: none;
-          }
-
-          .loggedin {
-            display: none;
-          }
-
-          .footer-content {
-            padding: 60px;
-          }
         }
 
         [hidden]{display:none!important}

@@ -51,7 +51,7 @@ const Nav = () => {
       <div className="menu">
           { auth0.isAuthenticated() &&
           <>
-          <div className="loggedin top-menu">
+          <div className="top-menu">
             <AddActivity />
             <MyActivities />
             <Logout />
@@ -61,10 +61,10 @@ const Nav = () => {
           }
           { auth0.isAuthenticated() === false &&
           <>
-            <span className="top-menu">
+            <div className="top-menu">
               <LoginAddActivity />
               <Login />
-            </span>
+            </div>
             <SideMenu />
           </>
           }
@@ -111,6 +111,7 @@ const Nav = () => {
           font-family: sans-serif;
           letter-spacing: 1px;
         }
+
       `}</style>
     </header>
   )
