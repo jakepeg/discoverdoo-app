@@ -155,6 +155,12 @@ class ActivityApp extends App {
             padding: 5px 10px;
           }
 
+          .message {
+            font-size: 1.9em!important;
+            font-weight: 400;
+            font-family: 'Helvetica', 'Arial', sans-serif!important;
+          }
+
           .nav-link {
             font-family: 'Paytone One', sans-serif;
             color: #ffffff;
@@ -497,6 +503,10 @@ class ActivityApp extends App {
 
           .back-link {
             display: none;
+          }
+
+          footer {
+            height: 460px;
           }
 
           .footer-content {

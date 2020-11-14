@@ -8,12 +8,14 @@ const CreatePage = () => (
       <title>DiscoverDoo - Add an activity</title>
       <meta name="title" content="DiscoverDoo fun finder" />
     </Head>
+    <div className="contain">
     { auth0.isAuthenticated() &&
       <Create />
     }
     { auth0.isAuthenticated() === false &&
-      <h1>Please sign in to add activities</h1>
+      <h1 className="message">Please sign in to add activities</h1>
     }
+    </div>
   </>
 )
 

@@ -14,21 +14,15 @@ class Callback extends React.Component {
 
   render() {
     return (
-      <>
-      <h1>Welcome back!</h1>
-
+      <div className="contain">
+      <h1 className="message">Welcome back!</h1>
       <style jsx>{`
-
-
         h1 {
           margin: 40px;
         }
 
       `}</style>
-    
-
-
-      </>
+      </div>
     )
   }
 }
