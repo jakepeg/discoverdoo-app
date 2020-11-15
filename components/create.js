@@ -282,7 +282,7 @@ const Create = (props) => {
         </div>
         <div className="form-group">
           {loading ? (
-            <h3>LOADING IMAGE...</h3>
+            <img className="spinner" src="/spinner.gif" alt="Spinner loader" />
           ) : (
             <img src={`https://res.cloudinary.com/jakepeg/image/upload/v1593005651/${image}`} style={{width: '150px'}} />
           )}
