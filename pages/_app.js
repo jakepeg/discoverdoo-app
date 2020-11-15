@@ -532,6 +532,11 @@ class ActivityApp extends App {
             flex-direction: column-reverse;
           }
 
+          h1 {
+            font-size: 1.7rem;
+            font-weight: 400;
+          }
+
         }
 
         [hidden]{display:none!important}
