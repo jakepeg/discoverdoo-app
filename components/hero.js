@@ -67,8 +67,9 @@ const Hero = () => {
 
           .hero-copy h1 {
             line-height: 45px;
-            font-size: 2rem;
+            font-size: 1.6rem;
             text-align: center;
+            line-height: 38px;
           }
 
         }

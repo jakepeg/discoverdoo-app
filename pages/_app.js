@@ -356,11 +356,12 @@ class ActivityApp extends App {
           flex-wrap: wrap;
           justify-content: space-between;
           align-items: flex-start;
+          flex-direction: row;
         }
 
         .image-section {
-            width: 700px;
-            display: block!important;
+          width: 700px;
+          display: block!important;
         }
 
         .info-section {
@@ -495,6 +496,7 @@ class ActivityApp extends App {
         @media (max-width: 768px) {
           .image-section {
               width: 100%;
+              margin-bottom: 40px;
           }
 
           .info-section {
@@ -519,6 +521,15 @@ class ActivityApp extends App {
 
           .top-menu {
             display: none;
+          }
+
+          .details-card {
+            margin-bottom: 20px;
+            margin-top: 20px;
+          }
+
+          .card-content {
+            flex-direction: column-reverse;
           }
 
         }

@@ -8,7 +8,6 @@ const DetailPage = (props) => {
   const router = useRouter()
   const { id } = router.query
   const { activity } = props
-
   const handleDelete = (id) => {
     deleteActivity(id).then(() => {
       router.push('/my-activities')
@@ -24,39 +23,27 @@ const DetailPage = (props) => {
       <div className="contain top-space">
         <div className="details-card">
           <div className="card-header">
-            
           <h1>{activity.name}</h1>
-
             <a className="back-link" id="back-btn" onClick={() => router.back()}>
               <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
               <span className="back">BACK</span>
             </a>
-
-
-
           </div>
-
           <div className="card-content">
-
             <div className="info-section">
-              
               <p className="description">{ activity.description }</p>
-
               {activity.ageFrom.length > 0 &&
                 <span>
-
                   <p className="info">
                   <img className="map-icon" align="top" src="/child.svg" alt="Child icon" />
                   Ages { activity.ageFrom } - { activity.ageTo }
                   </p>
                 </span>
               }
-
               <p className="info">
               <img className="map-icon" align="top" src="/tags.svg" alt="Tags icon" />
               { activity.category }
               </p>
-
               {activity.price.length > 0 &&
                 <span>
                   <p className="info">
@@ -65,7 +52,6 @@ const DetailPage = (props) => {
                   </p>
                 </span>
               }
-
               {/* <p className="info">
               <img className="map-icon" src="/share.svg" alt="Share" />
               Share with friends
@@ -85,10 +71,8 @@ const DetailPage = (props) => {
                   </a></p>
                 </span>
               }
-
             </div>
             <img className="image-section" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto/v1593005651/${activity.image}`} alt={activity.name} />
-          
           </div>
           {/* {activity.userId === Cookies.get('sub') && */}
           { auth0.isAuthenticated() &&
@@ -105,11 +89,6 @@ const DetailPage = (props) => {
   )
 }
 
-// DetailPage.getInitialProps = async ({ query }) => {
-//   const activity = await getActivityById(query.id)
-//   return { activity }
-// }
-
 export async function getServerSideProps({ query }) {
   const activity = await getActivityById(query.id)
   console.log("SSR (I think!)")
@@ -117,7 +96,5 @@ export async function getServerSideProps({ query }) {
     props: {activity}
   }
 }
-
-
 
 export default DetailPage
