@@ -6,7 +6,7 @@ import Select from 'react-select'
 
 const selectStyles = {
   menu: () => ({
-    width: 300,
+    width: '100%',
     border: '1px solid #999',
     color: '#000000',
     padding: 12,
@@ -14,7 +14,6 @@ const selectStyles = {
   }),
 
   control: () => ({
-    width: 300,
   }),
 
   indicatorsContainer: () => ({
@@ -174,16 +173,17 @@ const Create = (props) => {
 
   return (
   <>
-    <div className="contain top-space">
+
       <div className="details-card">
         <div className="card-header">
-          <a href="/" id="back-btn">
+        <h1>Add an activity</h1>
+          <a className="back-link" id="back-btn" onClick={() => router.back()}>
             <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
             <span className="back">BACK</span>
           </a>
         </div>
         <div className="form-card-content">
-        <h1>Add an activity</h1>
+
     <form>
     <div className="add-activity-form">
       <div className="form-col">
@@ -264,6 +264,20 @@ const Create = (props) => {
           ) : null }
         </div>
         <div className="form-group">
+          <label htmlFor="description">Description</label>
+          <textarea 
+          onChange={handleChange}
+          value={form.description}
+          className="form-control" 
+          id="description" 
+          name="description" 
+          required
+          rows="3"></textarea>
+          { descriptionError ? (
+            <div className="form-error">enter a description</div>
+          ) : null }
+        </div>
+        <div className="form-group">
           <label htmlFor="file">Image</label>
           <input 
             type="file"
@@ -289,20 +303,6 @@ const Create = (props) => {
         </div>
       </div>
       <div className="form-col">
-      <div className="form-group">
-          <label htmlFor="description">Description</label>
-          <textarea 
-          onChange={handleChange}
-          value={form.description}
-          className="form-control" 
-          id="description" 
-          name="description" 
-          required
-          rows="3"></textarea>
-          { descriptionError ? (
-            <div className="form-error">enter a description</div>
-          ) : null }
-        </div>
         <div className="form-group">
           <label htmlFor="category">Category</label>
           <Select
@@ -347,9 +347,9 @@ const Create = (props) => {
 </div>
 
 </div>
-</div>
 
-  <style jsx>{`
+
+<style jsx>{`
     .form-card-content {
       padding: 20px;
     }
@@ -357,13 +357,6 @@ const Create = (props) => {
     .add-activity-form {
       margin: 50px 50px 0 50px;
       display: flex;
-    }
-
-    @media (max-width: 1100px) {
-      .add-activity-form {
-        flex-direction: column;
-        margin: 0;
-      }
     }
 
     .form-col {
@@ -386,7 +379,8 @@ const Create = (props) => {
       margin-bottom: 15px;
       padding: 10px 20px;
       box-sizing: border-box;
-      width: 300px;
+      width: 90%;
+      margin-right: 10%;
     }
 
     select, textarea {
@@ -394,11 +388,8 @@ const Create = (props) => {
       margin-bottom: 15px;
       padding: 10px 20px;
       box-sizing: border-box;
-      width: 300px;
-    }
-
-    h1 {
-      margin-top: -35px;
+      width: 90%;
+      margin-right: 10%;
     }
 
     label {
@@ -413,15 +404,43 @@ const Create = (props) => {
       height: 120px;
     }
 
-    #category {
-      height: 135px;
+    .remove-image {
+      color: red;
+      text-decoration: underline;
+      font-size: 0.8rem;
+      cursor: pointer;
     }
 
-    #medium {
-      height: 40px;
+    @media (max-width: 1100px) {
+      .add-activity-form {
+        flex-direction: column;
+        margin: 0;
+      }
+
+      .form-group {
+        display: inline;
+      }
+
+
+      input:not([type="submit"]) {
+      width: 100%;
+      margin-right: 0;
     }
+
+    select, textarea {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    button {
+      margin: 0;
+    }
+
+  }
+
 
   `}</style>
+
 
 
 </>

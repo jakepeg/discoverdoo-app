@@ -6,7 +6,7 @@ import { CATEGORY_OPTIONS, MEDIUM_OPTIONS } from '../actions'
 
 const selectStyles = {
   menu: () => ({
-    width: 300,
+    width: '100%',
     border: '1px solid #999',
     color: '#000000',
     padding: 12,
@@ -14,7 +14,6 @@ const selectStyles = {
   }),
 
   control: () => ({
-    width: 300,
   }),
 
   indicatorsContainer: () => ({
@@ -191,9 +190,9 @@ const Edit = (props) => {
 <>
     <div className="contain top-space">
       <div className="details-card">
-        <div className="card-header">
-          
-          <a href="/" id="back-btn">
+      <div className="card-header">
+        <h1>Edit activity</h1>
+          <a className="back-link" id="back-btn" onClick={() => router.back()}>
             <img id="arrow-left" src="/arrow-left.svg" alt="Go Back" /> 
             <span className="back">BACK</span>
           </a>
@@ -201,8 +200,6 @@ const Edit = (props) => {
 
         <div className="form-card-content">
 
-        <h1>Edit activity</h1>
-        
     <form>
     <div className="add-activity-form">
       <div className="form-col">
@@ -359,6 +356,7 @@ const Edit = (props) => {
             placeholder="Select.."
             styles={selectStyles}
             classNamePrefix="select"
+            className="medium"
             onChange={handleMediumChange}
           />
           { mediumError ? (
@@ -393,12 +391,6 @@ const Edit = (props) => {
       display: flex;
     }
 
-    @media (max-width: 1100px) {
-      .add-activity-form {
-        flex-direction: column;
-      }
-    }
-
     .form-col {
       flex: 1;
     }
@@ -419,7 +411,8 @@ const Edit = (props) => {
       margin-bottom: 15px;
       padding: 10px 20px;
       box-sizing: border-box;
-      width: 300px;
+      width: 90%;
+      margin-right: 10%;
     }
 
     select, textarea {
@@ -427,11 +420,8 @@ const Edit = (props) => {
       margin-bottom: 15px;
       padding: 10px 20px;
       box-sizing: border-box;
-      width: 300px;
-    }
-
-    h1 {
-      margin-top: -35px;
+      width: 90%;
+      margin-right: 10%;
     }
 
     label {
@@ -446,20 +436,40 @@ const Edit = (props) => {
       height: 120px;
     }
 
-    #category {
-      height: 155px;
-    }
-
-    #medium {
-      height: 40px;
-    }
-
     .remove-image {
       color: red;
       text-decoration: underline;
       font-size: 0.8rem;
       cursor: pointer;
     }
+
+    @media (max-width: 1100px) {
+      .add-activity-form {
+        flex-direction: column;
+        margin: 0;
+      }
+
+      .form-group {
+        display: inline;
+      }
+
+
+      input:not([type="submit"]) {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    select, textarea {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    button {
+      margin: 0;
+    }
+
+  }
+
 
   `}</style>
 
