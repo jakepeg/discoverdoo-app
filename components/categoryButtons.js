@@ -8,7 +8,7 @@ const CategoryButtons = () => {
     <div className="category-buttons contain">
 {/* <h2 className="title">Browse Categories</h2> */}
       { CATEGORY_INFO.map(category => (
-        <div key={category.title} onclick="void(0)">
+        <div key={category.title} onClick={void(0)}>
           <Link href="/activities/[id]" as={`/activities/${category.title}`}>
             <a className="category-button">
               <div className="category-icon">
