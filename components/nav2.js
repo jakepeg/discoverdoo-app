@@ -23,7 +23,7 @@ const Logout = () => {
 const AddActivity = () => {
   return (
     <Link href="/create">
-      <span className="nav-link">ADD ACTIVITY</span>
+        <span className="nav-link">ADD ACTIVITY</span>
     </Link>
   )
 }
@@ -31,7 +31,9 @@ const AddActivity = () => {
 const MyActivities = () => {
   return (
     <Link href="/my-activities">
-      <span className="nav-link">MY ACTIVITIES</span>
+      <a className="nounderline">
+        <span className="nav-link">MY ACTIVITIES</span>
+      </a>
     </Link>
   )
 }

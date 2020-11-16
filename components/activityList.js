@@ -45,6 +45,7 @@ const ActivityList = (props) => {
       }
       </div>
       <style jsx>{`
+
         .nounderline {
           text-decoration: none;
         }

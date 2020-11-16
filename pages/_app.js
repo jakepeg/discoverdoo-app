@@ -102,7 +102,6 @@ class ActivityApp extends App {
           .base-page {
             background-color: #4DA1A9;
             min-height: calc(100vh - 478px);
-
           }
 
           footer {
