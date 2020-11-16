@@ -53,7 +53,7 @@ const Hero = () => {
           .hero-section {
             margin: 0;
             grid-template-columns: 100%;
-            height: 250px;
+            height: 180px;
           }
 
           .hero-image {
@@ -62,7 +62,7 @@ const Hero = () => {
 
           .hero-copy {
             max-width: 100%;
-            margin-top: 20px;
+            margin-top: 10px;
           }
 
           .hero-copy h1 {

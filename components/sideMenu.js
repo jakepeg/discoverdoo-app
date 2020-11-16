@@ -79,9 +79,6 @@ const SideMenu = () => {
 
   }
 
-
-
-
 { auth0.isAuthenticated() === false &&
 <Menu className="burger" right styles={ styles }>
 <a className="menu-item" href="/">Home</a>
@@ -92,13 +89,10 @@ const SideMenu = () => {
 
   }
 
-
   <style jsx>{`
-
-.menu-item {
-  display: block;
-}
-
+  .menu-item {
+    display: block;
+  }
 `}</style>
 
 

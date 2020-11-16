@@ -24,23 +24,11 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/activity/[id]": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/callback": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/create": [
+    "/activities/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
     "/index": [
-      "static/runtime/webpack.js",
-      "static/runtime/main.js"
-    ],
-    "/my-activities": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]
