@@ -43,7 +43,7 @@ var styles = {
     padding: '0.8em'
   },
   bmItem: {
-    display: 'inline-block'
+    display: 'block'
   },
   bmOverlay: {
     background: 'rgba(0, 0, 0, 0)'
@@ -60,31 +60,19 @@ const SideMenu = () => {
 
 { auth0.isAuthenticated() &&
   <Menu className="burger" right styles={ styles }>
-
-    <Link href="/">
-      <a className="menu-item">Home</a>
-    </Link>
-
-    <Link href="/create">
-      <a className="menu-item">Add activity</a>
-    </Link>
-
-    <Link href="/my-activities">
-      <a className="menu-item">My activities</a>
-    </Link>
-
-    <a className="menu-item" onClick={auth0.logout}>Logout</a>
-
+    <a href="/">Home</a>
+    <a href="/create">Add activity</a>
+    <a href="/my-activities">My activities</a>
+    <a onClick={auth0.logout}>Logout</a>
   </Menu>
 
   }
 
 { auth0.isAuthenticated() === false &&
 <Menu className="burger" right styles={ styles }>
-<a className="menu-item" href="/">Home</a>
-<a className="menu-item" onClick={auth0.loginAddActivity}>Add activity</a>
-<a className="menu-item" onClick={auth0.login}>Sign in</a>
-<span>is not Authenticated</span>
+<a href="/">Home</a>
+<a onClick={auth0.loginAddActivity}>Add activity</a>
+<a onClick={auth0.login}>Sign in</a>
 </Menu>
 
   }
