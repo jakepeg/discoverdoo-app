@@ -36,11 +36,13 @@ class Auth0 {
   }
 
   setSession(authResult) {
-    let expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime())
-    Cookies.set('user', authResult.idTokenPayload)
-    Cookies.set('jwt', authResult.idToken)
-    Cookies.set('expiresAt', expiresAt)
-    Cookies.set('sub', authResult.idTokenPayload.sub)
+    // let expiresAt = JSON.stringify((authResult.expiresIn * 1000) + new Date().getTime())
+    let date = new Date();
+    let expiresAt = date.setDate(date.getDate() + 1);
+    Cookies.set('user', authResult.idTokenPayload, { expires: 1 })
+    Cookies.set('jwt', authResult.idToken, { expires: 1 })
+    Cookies.set('expiresAt', expiresAt, { expires: 1 })
+    Cookies.set('sub', authResult.idTokenPayload.sub, { expires: 1 })
     console.log(expiresAt)
   }
 
@@ -69,7 +71,7 @@ class Auth0 {
   }
 
   isAuthenticated() {
-    const expiresAt = Cookies.getJSON('expiresAt')
+    const expiresAt = Cookies.get('expiresAt')
     return new Date().getTime() < expiresAt;
     }
 }
