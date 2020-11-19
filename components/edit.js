@@ -282,6 +282,20 @@ const Edit = (props) => {
         </div>
 
         <div className="form-group">
+          <label htmlFor="description">Description</label>
+          <textarea 
+          onChange={handleChange}
+          value={form.description}
+          className="form-control" 
+          id="description" 
+          name="description" 
+          rows="3"></textarea>
+          { descriptionError ? (
+            <div className="form-error">enter a description</div>
+          ) : null }
+        </div>
+
+        <div className="form-group">
         { displayImage === false  ? (
           <>
           <label htmlFor="file">Image</label>
@@ -304,7 +318,6 @@ const Edit = (props) => {
           ) : (
             <img src={`https://res.cloudinary.com/jakepeg/image/upload/v1593005651/${form.image}`} style={{width: '150px'}} />
           )}
-
         </div>
 
         { displayImage ? (
@@ -312,21 +325,6 @@ const Edit = (props) => {
         ) : ( null )}
       </div>
       <div className="form-col">
-
-      <div className="form-group">
-          <label htmlFor="description">Description</label>
-          <textarea 
-          onChange={handleChange}
-          value={form.description}
-          className="form-control" 
-          id="description" 
-          name="description" 
-          rows="3"></textarea>
-          { descriptionError ? (
-            <div className="form-error">enter a description</div>
-          ) : null }
-        </div>
-
         <div className="form-group">
           <label htmlFor="category">Category</label>
           <Select

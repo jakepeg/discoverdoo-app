@@ -37,6 +37,7 @@ const CategoryPage = (props) => {
 }
 
 export async function getServerSideProps({ query }) {
+  console.log('getServerSideProps')
   const activities = await getActivitiesByCategory(query.id)
   return {
     props: {activities}

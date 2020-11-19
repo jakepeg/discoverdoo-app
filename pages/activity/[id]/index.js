@@ -1,8 +1,9 @@
 import { useRouter } from 'next/router'
-import { getActivityById, deleteActivity } from '../../../actions'
+import { getActivityById, deleteActivity, getActivities } from '../../../actions'
 import Link from 'next/link'
 import Head from 'next/head'
 import auth0 from '../../../services/auth0'
+import ActivityList from '../../../components/activityList'
 
 const DetailPage = (props) => {
   const router = useRouter()
@@ -13,6 +14,8 @@ const DetailPage = (props) => {
       router.push('/my-activities')
     })
   }
+
+  const filteredActivities = props.activities.filter(a=>a.category.includes(activity.category))
 
   return (
     <>
@@ -74,7 +77,6 @@ const DetailPage = (props) => {
             </div>
             <img className="image-section" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto/v1593005651/${activity.image}`} alt={activity.name} />
           </div>
-          {/* {activity.userId === Cookies.get('sub') && */}
           { auth0.isAuthenticated() &&
               <>
                 <button className="delete-button" onClick={() => handleDelete(activity._id)} href="#" role="button">Delete</button>
@@ -85,15 +87,22 @@ const DetailPage = (props) => {
             }
         </div>
       </div>
+      { !activity.promoted &&
+        <div className="contain top-space">
+          <ActivityList 
+            activities={filteredActivities} 
+            title="Similar"  
+          />
+        </div>
+      }
     </>
   )
 }
 
 export async function getServerSideProps({ query }) {
-  const activity = await getActivityById(query.id)
-  console.log("SSR (I think!)")
+  let [activity, activities] = await Promise.all([await getActivityById(query.id), getActivities()]);
   return {
-    props: {activity}
+    props: {activity, activities}
   }
 }
 

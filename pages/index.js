@@ -19,7 +19,6 @@ const Home = (props) => {
       return activities
     }
     return activities.filter((a) => {
-      console.log(filter)
       return a.category && a.category.includes(filter)
     })
   }

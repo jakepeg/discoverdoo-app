@@ -361,6 +361,7 @@ class ActivityApp extends App {
         .image-section {
           width: 700px;
           display: block!important;
+          margin-bottom: 50px;
         }
 
         .info-section {
