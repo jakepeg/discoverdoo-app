@@ -16,7 +16,6 @@ const AddActivityForm = (props) => {
   const [form, setForm] = useState(formData)
 
   const handleChange = (event) => {
-    console.log('handleChange')
     const target = event.target
     const name = target.name
 
@@ -34,7 +33,6 @@ const AddActivityForm = (props) => {
     for (let i = 0; i < optionsLength; i++) {
       if (options[i].selected) {
         value.push(options[i].value)
-        console.log(value)
       }
     }
 

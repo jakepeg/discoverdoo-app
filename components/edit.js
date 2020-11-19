@@ -101,7 +101,6 @@ const Edit = (props) => {
   const [displayImage, setImageVisibility] = useState(true)
 
   const removeImage = () => {
-    console.log("remove image")
     setImageVisibility(false)
     setForm({
       ...form,
@@ -120,7 +119,6 @@ const Edit = (props) => {
     let value = []
     if (e != null) {
       value = Array.from(e, option => option.value);
-      console.log(form.category)
     } else {
       value = []
     }
@@ -141,7 +139,6 @@ const Edit = (props) => {
     let value = []
     if (e != null) {
       value = Array.from(e, option => option.value);
-      console.log(form.category)
     } else {
       value = []
     }

@@ -70,12 +70,10 @@ export const getMyActivities = (uid) => {
 }
 
 export const getActivitiesByCategory = (cat) => {
-  console.log(cat)
   return axios.get(`${BASE_URL}/api/v1/activitiesByCategory/${cat}`).then(res => res.data)
 }
 
 export const updateActivity = (activity) => {
-  console.log(activity)
   activity.id = slugify(activity.name)
   return axios.patch(`${BASE_URL}/api/v1/activities/${activity._id}`, activity)
   .then(res => res.data)

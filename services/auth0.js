@@ -29,7 +29,6 @@ class Auth0 {
           resolve();
         } else if (err) {
           reject(err);
-          console.log(err);
         }
       });
     })
@@ -43,7 +42,6 @@ class Auth0 {
     Cookies.set('jwt', authResult.idToken, { expires: 1 })
     Cookies.set('expiresAt', expiresAt, { expires: 1 })
     Cookies.set('sub', authResult.idTokenPayload.sub, { expires: 1 })
-    console.log(expiresAt)
   }
 
   logout() {
@@ -62,7 +60,6 @@ class Auth0 {
   login() {
     Cookies.set('returnURL', '/')
     this.auth0.authorize()
-    console.log(CLIENT_URL)
   }
 
   loginAddActivity() {

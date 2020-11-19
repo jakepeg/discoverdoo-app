@@ -5,7 +5,6 @@ import { CATEGORY_LIST } from '../actions';
 const Filter = (props) => {
 
   const onChange = value => {
-    // console.log(value)
     props.changeCategory(value.label)
   };
 

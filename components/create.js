@@ -102,7 +102,6 @@ const Create = (props) => {
     const target = event.target
     const name = target.name
     const cleanWebsite = target.value.replace('https://','').replace('http://','');
-    console.log(target)
     setForm({
       ...form,
       [name]: cleanWebsite
@@ -126,7 +125,6 @@ const Create = (props) => {
     let value = []
     if (e != null) {
       value = Array.from(e, option => option.value);
-      console.log(form.category)
     } else {
       value = []
     }

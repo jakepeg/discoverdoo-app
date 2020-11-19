@@ -7,8 +7,6 @@ class Callback extends React.Component {
 
   async componentDidMount() {
     await auth0Client.handleAuthentication();
-    // this.props.router.push(Cookies.get('returnURL'))
-    console.log(Cookies.get('returnURL'))
     this.props.router.push(Cookies.get('returnURL'))
   }
 
@@ -20,7 +18,6 @@ class Callback extends React.Component {
         h1 {
           margin: 40px;
         }
-
       `}</style>
       </div>
     )
