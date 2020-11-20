@@ -54,8 +54,10 @@ const CategoryButtons = () => {
         .category-icon {
           width: 100px;
           height: 100px;
-          background-color: rgba(255, 255, 255, 0.9);
-          border: 3px solid #0b334d;
+          background-color: rgba(255, 255, 255, 0.6);
+          background-image: url("https://res.cloudinary.com/jakepeg/image/upload/v1605860773/logo-no-d-cropped_na0sly.svg");
+          background-size: cover;
+          border: 2px dotted #0b334d;
           border-radius: 50px;
           padding: 7px;
         }
