@@ -103,17 +103,6 @@ class ActivityApp extends App {
             min-height: calc(100vh - 478px);
           }
 
-          footer {
-            height: 340px;
-            width: 100%;
-            background-color: #0b334d;
-            text-align: center;
-          }
-
-          .footer-content {
-            padding: 30px 50px;
-          }
-
           button {
             background-color: #ffffff;
             color: #00BCD4;
@@ -485,11 +474,6 @@ class ActivityApp extends App {
           .image-section {
               width: 300px;
           }
-
-          .footer-content {
-            padding: 40px;
-          }
-
         }
 
         @media (max-width: 768px) {
@@ -504,14 +488,6 @@ class ActivityApp extends App {
 
           .back-link {
             display: none;
-          }
-
-          footer {
-            height: 460px;
-          }
-
-          .footer-content {
-            padding: 60px;
           }
 
           .bm-burger-button {

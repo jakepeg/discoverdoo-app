@@ -43,6 +43,38 @@ const Footer = () => {
 
             <p className="email-link"><a href="mailto:hello@discoverdoo.com">hello@discoverdoo.com</a></p>
     </div>
+
+    <style jsx>{`
+
+      footer {
+        height: 340px;
+        width: 100%;
+        background-color: #0b334d;
+        background-image: url("https://res.cloudinary.com/jakepeg/image/upload/v1605858493/doo-logo-white_oidwyv.svg");
+        text-align: center;
+      }
+
+      .footer-content {
+        padding: 30px 50px;
+      }
+
+      @media (max-width: 992px) {
+        .footer-content {
+          padding: 40px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        footer {
+          height: 460px;
+        }
+
+        .footer-content {
+          padding: 60px;
+        }
+      }
+
+    `}</style>
   </footer>
   )
 }
