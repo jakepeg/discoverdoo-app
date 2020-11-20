@@ -18,6 +18,7 @@ const Hero = () => {
           background-color: #0b334d;
           background-image: url("https://res.cloudinary.com/jakepeg/image/upload/v1605858493/doo-logo-white_oidwyv.svg");
           background-repeat: repeat;
+          background-position: center top;
         }
 
         .hero-section {
