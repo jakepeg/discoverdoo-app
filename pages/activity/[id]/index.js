@@ -76,6 +76,11 @@ const DetailPage = (props) => {
               }
             </div>
             <img className="image-section" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto/v1593005651/${activity.image}`} alt={activity.name} />
+
+
+            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/rd1kZXvrQMk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
+
           </div>
           { auth0.isAuthenticated() &&
               <>

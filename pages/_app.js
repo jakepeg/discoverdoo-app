@@ -82,7 +82,7 @@ class ActivityApp extends App {
           body {
             font-family: 'Helvetica', 'Arial', sans-serif;
             font-size: 1rem;
-            background-color: #4DA1A9;
+            background-color: #129FAA;
             min-height: 100vh;
             position: relative;
             margin: 0;
@@ -99,7 +99,7 @@ class ActivityApp extends App {
           }
 
           .base-page {
-            background-color: #4DA1A9;
+            background-color: #129FAA;
             min-height: calc(100vh - 478px);
           }
 
