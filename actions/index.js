@@ -79,6 +79,13 @@ export const updateActivity = (activity) => {
   .then(res => res.data)
 }
 
+export const updateFavourites = (user) => {
+  user.user = 'abc123'
+  user.favourite = {'ddd': true}
+  return axios.patch(`${BASE_URL}/api/v1/favourites/${user.user}`, user)
+  .then(res => res.data)
+}
+
 export const deleteActivity = (id) => {
   return axios.delete(`${BASE_URL}/api/v1/activities/${id}`)
   // return axios.delete(`${BASE_URL}/api/v1/activities/${id}`).then(res => res.data)

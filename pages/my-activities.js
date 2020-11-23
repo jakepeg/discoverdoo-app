@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ActivityList from '../components/activityList'
-import { getMyActivities } from '../actions'
+import { getMyActivities, updateFavourites } from '../actions'
 import auth0 from '../services/auth0'
 import Cookies from 'js-cookie'
 import Head from 'next/head'
@@ -36,6 +36,9 @@ const MyActivities = () => {
           </div>
         }
       </div>
+
+<div onClick={updateFavourites}>updateFavourites</div>
+
     </>
   )
 }

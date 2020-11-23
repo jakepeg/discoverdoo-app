@@ -42,6 +42,7 @@ class Auth0 {
     Cookies.set('jwt', authResult.idToken, { expires: 1 })
     Cookies.set('expiresAt', expiresAt, { expires: 1 })
     Cookies.set('sub', authResult.idTokenPayload.sub, { expires: 1 })
+    console.log(authResult)
   }
 
   logout() {
