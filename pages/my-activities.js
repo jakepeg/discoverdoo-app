@@ -9,6 +9,15 @@ const MyActivities = () => {
 
   const [activities, setActivities] = useState([]);
 
+  const user = [
+    {
+      user: 'abc123', 
+      favourites: {
+        activity1: true
+      }
+  }
+  ]
+
   useEffect(()=>{
     getMyActivities(Cookies.get('sub')).then(data => setActivities(data))
    },[])
@@ -37,7 +46,7 @@ const MyActivities = () => {
         }
       </div>
 
-<div onClick={updateFavourites}>updateFavourites</div>
+<div onClick={updateFavourites(user)}>updateFavourites</div>
 
     </>
   )
