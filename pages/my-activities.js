@@ -50,9 +50,9 @@ const MyActivities = () => {
           </div>
         }
       </div>
-<div>
+{/* <div>
 <span onClick={ () => HandleUpdateFavourites(user)}>updateFavourites</span>
-</div>
+</div> */}
     </>
   )
 }
