@@ -13,15 +13,15 @@ const MyActivities = () => {
     {
       user: 'abc123', 
       favourites: {
-        activity1: true
+        activity00: true
       }
-  }
+    }
   ]
 
-  const HandleUpdateFavourites = (user) => {
-    updateFavourites(user)
-    // console.log(user)
-  }
+  // const HandleUpdateFavourites = (user) => {
+  //   updateFavourites(user)
+  //   // console.log(user)
+  // }
 
   useEffect(()=>{
     getMyActivities(Cookies.get('sub')).then(data => setActivities(data))
@@ -50,9 +50,9 @@ const MyActivities = () => {
           </div>
         }
       </div>
-{/* <div>
-<span onClick={ () => HandleUpdateFavourites(user)}>updateFavourites</span>
-</div> */}
+<div>
+<span onClick={ () => updateFavourites(user)}>updateFavourites</span>
+</div>
     </>
   )
 }
