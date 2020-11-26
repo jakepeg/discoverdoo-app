@@ -9,15 +9,16 @@ const MyActivities = () => {
 
   const [activities, setActivities] = useState([]);
 
-  const user = [
+  const user = 
     {
       user: 'abc123', 
       favourites: {
-        activity00: true
+        jake: true,
+        emma: true,
+        louis: true
       }
     }
-  ]
-
+  
   // const HandleUpdateFavourites = (user) => {
   //   updateFavourites(user)
   //   // console.log(user)
