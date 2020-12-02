@@ -1,5 +1,6 @@
 import auth0 from 'auth0-js'
 import Cookies from 'js-cookie'
+import { getUserFavourites } from '../actions'
 
 const CLIENT_URL = process.env.CLIENT_URL;
 
@@ -42,8 +43,14 @@ class Auth0 {
     Cookies.set('jwt', authResult.idToken, { expires: 1 })
     Cookies.set('expiresAt', expiresAt, { expires: 1 })
     Cookies.set('sub', authResult.idTokenPayload.sub, { expires: 1 })
-    console.log(authResult)
+    this.setFavesCookie()
   }
+
+  // get user favourites from the db and set them in a cookie
+  // can this be moved to the favourites component?
+  setFavesCookie() {
+    getUserFavourites(Cookies.get('sub')).then(data => Cookies.set('favourites', data[0].favourites, { expires: 1 }))
+   }
 
   logout() {
     Cookies.remove('user')
@@ -51,6 +58,7 @@ class Auth0 {
     Cookies.remove('expiresAt')
     Cookies.remove('sub')
     Cookies.remove('returnURL')
+    Cookies.remove('favourites')
 
     this.auth0.logout({
       returnTo: CLIENT_URL,

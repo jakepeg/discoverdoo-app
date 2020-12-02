@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import ActivityList from '../components/activityList'
-import { getMyActivities, updateFavourites } from '../actions'
+import { getMyActivities } from '../actions'
 import auth0 from '../services/auth0'
 import Cookies from 'js-cookie'
 import Head from 'next/head'
@@ -8,21 +8,6 @@ import Head from 'next/head'
 const MyActivities = () => {
 
   const [activities, setActivities] = useState([]);
-
-  const user = 
-    {
-      user: 'abc123', 
-      favourites: {
-        jake: true,
-        emma: true,
-        louis: true
-      }
-    }
-  
-  // const HandleUpdateFavourites = (user) => {
-  //   updateFavourites(user)
-  //   // console.log(user)
-  // }
 
   useEffect(()=>{
     getMyActivities(Cookies.get('sub')).then(data => setActivities(data))
@@ -51,9 +36,8 @@ const MyActivities = () => {
           </div>
         }
       </div>
-<div>
-<span onClick={ () => updateFavourites(user)}>updateFavourites</span>
-</div>
+    <div>
+    </div>
     </>
   )
 }

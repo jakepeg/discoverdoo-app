@@ -23,7 +23,8 @@
     "react-lazyload": "^2.6.7",
     "react-select": "^3.0.8",
     "react-share": "^4.1.0",
-    "react-slugify": "^2.0.1"
+    "react-slugify": "^2.0.1",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.10.7"

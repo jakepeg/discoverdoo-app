@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
+import Favourites from './favourites'
 
 const ActivityList = (props) => {
   const { activities } = props
@@ -20,10 +21,13 @@ const ActivityList = (props) => {
       { activities.map(activity => (
         <div key={activity.id}>
           <LazyLoad height={400} throttle={500}>
+          <Favourites activityId = {activity._id} />
             <Link href="/activity/[id]" as={`/activity/${activity.id}`}>
               <a className="nounderline">
                 <div className="card">
+
                   <img className="card-image" src={`https://res.cloudinary.com/jakepeg/image/upload/q_auto,f_auto,c_fill,h_250,w_350/v1593005651/${activity.image}`} alt={activity.name} />
+                  
                   <div className="card-content">
                     <h2>{activity.name}</h2>
                     <div className="card-footer">
@@ -82,6 +86,7 @@ const ActivityList = (props) => {
         }
 
         .card-image {
+          position: relative;
           width: 350px;
           height: 250px;
         }

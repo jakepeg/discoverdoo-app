@@ -79,9 +79,12 @@ export const updateActivity = (activity) => {
   .then(res => res.data)
 }
 
+export const getUserFavourites = (uid) => {
+  return axios.get(`${BASE_URL}/api/v1/userFavourites/${uid}`).then(res => res.data)
+}
+
 export const updateFavourites = (user) => {
-  console.log(user)
-  const userid = 'abc123'
+  const userid = user.user
   return axios.patch(`${BASE_URL}/api/v1/favourites/${userid}`, user)
   .then(res => res.data)
 }
