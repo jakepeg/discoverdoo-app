@@ -11,11 +11,12 @@ const Favourites = (props) => {
 
   if (auth0.isAuthenticated()) {
     // do I need to refresh this to reflect the cookie after any upadates?
+    // shouldn't user use useState?
     user = 
-      {
-        user: Cookies.get('sub'), 
-        favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
-      }
+    {
+      user: Cookies.get('sub'), 
+      favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
+    }
   }
 
   const favourites = user.favourites

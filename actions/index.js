@@ -39,8 +39,6 @@ export const MEDIUM_OPTIONS = [
   { value: 'Podcast', label: 'Podcast' }
 ]
 
-
-
 export const getCategories = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

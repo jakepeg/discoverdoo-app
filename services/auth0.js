@@ -79,7 +79,7 @@ class Auth0 {
   isAuthenticated() {
     const expiresAt = Cookies.get('expiresAt')
     return new Date().getTime() < expiresAt;
-    }
+  }
 }
 
 const auth0Client = new Auth0();
