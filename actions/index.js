@@ -55,6 +55,7 @@ export const getActivities = () => {
 export const createActivity = (activity) => {
   activity.id = slugify(activity.name)
   activity.promoted = false
+  activity.published = false
   return axios.post(`${BASE_URL}/api/v1/activities`, activity)
   .then(res => res.data)
 }
