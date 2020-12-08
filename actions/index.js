@@ -1,5 +1,6 @@
 import axios from 'axios'
 import slugify from 'react-slugify'
+import Cookies from 'js-cookie'
 
 const BASE_URL = process.env.BASE_URL;
 
@@ -53,6 +54,8 @@ export const getActivities = () => {
 }
 
 export const createActivity = (activity) => {
+  // set a cookie, action = create
+  Cookies.set('action', 'create', { expires: 1 })
   activity.id = slugify(activity.name)
   activity.promoted = false
   activity.published = false

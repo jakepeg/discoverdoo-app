@@ -8,9 +8,18 @@ import Head from 'next/head'
 const MyActivities = () => {
 
   const [activities, setActivities] = useState([]);
+  const [createMessage, setCreateMessage] = useState('hidden');
 
   useEffect(()=>{
     getMyActivities(Cookies.get('sub')).then(data => setActivities(data))
+    if (Cookies.get('action') === 'create') {
+      console.log('new activity')
+      setCreateMessage('visible')
+      Cookies.remove('action')
+    }
+
+  // if it exists show the new activity message - Your new listing will be reviewed before it is pulished on the main directory, it will appear within 24 hours. In the meantime you can view the listing here, on your My Activities page
+  // remove the actions cookie
    },[])
 
   return (
@@ -20,15 +29,16 @@ const MyActivities = () => {
         <meta name="title" content="DiscoverDoo fun finder" />
       </Head>
       <div className="contain home-page">
+        <h3 className={createMessage}>Your new listing will be reviewed before it is published on the main directory, it will appear within 24 hours. In the meantime you can view the listing here, on your My Activities page</h3>
         { auth0.isAuthenticated() &&
-      <>
-          <div className="rowz">
-          </div>
-          <ActivityList 
-          activities={activities}
-          title="My"
-          />
-      </>
+        <>
+            <div className="rowz">
+            </div>
+            <ActivityList 
+            activities={activities}
+            title="My"
+            />
+        </>
         }
         { auth0.isAuthenticated() === false &&
           <div className="rowz">
@@ -38,6 +48,43 @@ const MyActivities = () => {
       </div>
     <div>
     </div>
+
+
+
+
+    <style jsx>{`
+
+      .hidden {
+        display: none;
+      }
+
+      .visible {
+        display: inline-block;
+        font-weight: 500;
+        margin-top: 50px;
+      }
+
+      @media (max-width: 1130px) {
+
+      }
+
+      @media (max-width: 992px) {
+
+      }
+
+      @media (max-width: 768px) {
+
+      }
+    `}</style>
+
+
+
+
+
+
+
+
+
     </>
   )
 }
