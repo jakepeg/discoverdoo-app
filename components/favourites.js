@@ -5,58 +5,52 @@ import { updateFavourites } from '../actions'
 import Heart from './heart'
  
 const Favourites = (props) => {
-  const [isClick, setClick] = useState(false);
+  const [isClick, setClick] = useState();
   const activityId = props.activityId
   let user = {favourites: {}, user: ""}
+  // let favourites = {}
 
-  if (auth0.isAuthenticated()) {
-    // do I need to refresh this to reflect the cookie after any upadates? shouldn't user use useState?
+  const setUser = () => {
     user = 
     {
       user: Cookies.get('sub'), 
       favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
     }
-    console.log(user)
+    // favourites = user.favourites
   }
 
-  const favourites = user.favourites
+  if (auth0.isAuthenticated()) {
+    // do I need to refresh this to reflect the cookie after any upadates? shouldn't user use useState?
+    setUser()
+  }
 
   const clickHeart = () => {
+    // if the user is logged in then allow them to add / remove favourites
     if (auth0.isAuthenticated()) {
+      // update isClick state to what it wasn't before
       setClick(!isClick)
-      if (isClick === true) {
-        favourites[activityId] = false
-        updateFavourites(user)
-        auth0.setFavesCookie()
-        user = 
-        {
-          user: Cookies.get('sub'), 
-          favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
-        }
-      }
-      if (isClick === false) {
-        // if (favourites[activityId] === false) {
-        //   favourites[activityId] = true
-        // } else {
-        //   user.favourites[0].push({activityId: true});
-        // }
-        favourites[activityId] = true
-        updateFavourites(user)
-        auth0.setFavesCookie()
-        user = 
-        {
-          user: Cookies.get('sub'), 
-          favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
-        }
-      }
-    } else {
+      // 
+      user.favourites[activityId] = !isClick
+      console.log(user.favourites[activityId])
+      // update favourites in mongoDB
+      updateFavourites(user)
+      
+      // auth0.setFavesCookie()
+      Cookies.set('favourites', JSON.stringify([user.favourites]))
+      console.log(user.favourites)
+      // make sure what 
+      setUser()
+    } 
+    // if the user is not logged in the show login popup
+    else 
+    {
       auth0.login()
     }
   }
 
   useEffect(() => {
     if (auth0.isAuthenticated()) {
-      if (favourites[activityId] === true) {
+      if (user.favourites[activityId] === true) {
         setClick(true)
       }
     }
@@ -85,7 +79,6 @@ const Favourites = (props) => {
           cursor: pointer;
         }
       `}</style>
-
     </>
   );
 }
