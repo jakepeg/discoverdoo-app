@@ -7,7 +7,7 @@ import Heart from './heart'
 const Favourites = (props) => {
   const [isClick, setClick] = useState(false);
   const activityId = props.activityId
-  let user = {}
+  let user = {favourites: {}, user: ""}
 
   if (auth0.isAuthenticated()) {
     // do I need to refresh this to reflect the cookie after any upadates? shouldn't user use useState?
@@ -16,6 +16,7 @@ const Favourites = (props) => {
       user: Cookies.get('sub'), 
       favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
     }
+    console.log(user)
   }
 
   const favourites = user.favourites
