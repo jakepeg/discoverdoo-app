@@ -102,6 +102,27 @@ const DetailPage = (props) => {
           />
         </div>
       }
+
+      <style jsx>{`
+
+.description {
+  white-space: pre-wrap;
+}
+
+@media (max-width: 1130px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 768px) {
+
+}
+`}</style>
+
+
     </>
   )
 }
