@@ -48,8 +48,17 @@ const Footer = () => {
         text-align: center;
       }
 
+      .social-icons {
+        margin: 20px;
+      }
+
       .footer-content {
         padding: 30px 50px;
+      }
+
+      .email-link {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
       }
 
       @media (max-width: 992px) {

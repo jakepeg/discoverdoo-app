@@ -113,6 +113,13 @@ class ActivityApp extends App {
             border: 2px solid #00BCD4;
             transition: 0.3s;
             text-transform: uppercase;
+          }
+
+          .social-icons-small {
+            margin-left: 10px;
+          }
+
+          .social-icons {
             margin-left: 20px;
           }
 
@@ -208,15 +215,6 @@ class ActivityApp extends App {
             font-size: 1.2rem;
             font-weight: 300;
             color: white;
-          }
-
-          .social-icons {
-            margin: 0 10px;
-          }
-
-          .email-link {
-            font-size: 1.2rem;
-            margin-bottom: 40px;
           }
 
           .react-select-container {
@@ -420,11 +418,13 @@ class ActivityApp extends App {
 
         .edit-button {
           margin-bottom: 20px;
+          margin-left: 20px;
         }
 
         .delete-button {
           color: red;
           border: 1px solid red;
+          margin-left: 20px;
         }
 
         .menu-item {
