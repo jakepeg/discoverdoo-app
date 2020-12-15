@@ -24,7 +24,7 @@
     "/_polyfills": [
       "static/runtime/polyfills.js"
     ],
-    "/activity/[id]": [
+    "/activities/[id]": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],

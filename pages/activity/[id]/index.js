@@ -37,14 +37,14 @@ const DetailPage = (props) => {
           <div className="card-content">
             <div className="info-section">
               <p className="description">{ activity.description }</p>
-              {activity.ageFrom.length > 0 &&
+
                 <span>
                   <p className="info">
                   <img className="map-icon" align="top" src="/child.svg" alt="Child icon" />
                   Ages { activity.ageFrom } - { activity.ageTo }
                   </p>
                 </span>
-              }
+
               <p className="info">
               <img className="map-icon" align="top" src="/tags.svg" alt="Tags icon" />
               { activity.category }
