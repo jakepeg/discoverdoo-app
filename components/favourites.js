@@ -13,19 +13,20 @@ const Favourites = (props) => {
   const setUser = () => {
 
     // setTimeout(() => {
+      if (auth0.hasFavourites()) {
       user = 
       {
         user: Cookies.get('sub'), 
         favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
       }
+    }
     // }, 1000);
-console.log(user)
   }
 
 
 
   // if the user is authenticated and the cookies have been set
-  if (auth0.hasFavourites()) {
+  if (auth0.isAuthenticated()) {
     // do I need to refresh this to reflect the cookie after any upadates? shouldn't user use useState?
     setUser()
   }
@@ -59,10 +60,6 @@ console.log(user)
       if (user.favourites[activityId] === true) {
         setClick(true)
       }
-    }
-    if (auth0.hasFavourites()) {
-      // do I need to refresh this to reflect the cookie after any upadates? shouldn't user use useState?
-      setUser()
     }
   }, [])
 
