@@ -50,7 +50,7 @@ class Auth0 {
   // can this be moved to the favourites component?
   setFavesCookie() {
     getUserFavourites(Cookies.get('sub')).then(data => Cookies.set('favourites', data[0].favourites, { expires: 1 }))
-   }
+  }
 
   logout() {
     Cookies.remove('user')
@@ -79,6 +79,10 @@ class Auth0 {
   isAuthenticated() {
     const expiresAt = Cookies.get('expiresAt')
     return new Date().getTime() < expiresAt;
+  }
+
+  hasFavourites() {
+    return Cookies.get('favourites');
   }
 }
 
