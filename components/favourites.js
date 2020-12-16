@@ -7,16 +7,19 @@ import Heart from './heart'
 const Favourites = (props) => {
   const [isClick, setClick] = useState();
   const activityId = props.activityId
-  let user = {favourites: {}, user: ""}
+  let user = {favourites: [{}], user: ""}
   // let favourites = {}
 
   const setUser = () => {
-    user = 
-    {
-      user: Cookies.get('sub'), 
-      favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
-    }
-    // favourites = user.favourites
+
+    // setTimeout(() => {
+      user = 
+      {
+        user: Cookies.get('sub'), 
+        favourites: JSON.parse(Cookies.get('favourites').substring(1, Cookies.get('favourites').length-1))
+      }
+    // }, 1000);
+
   }
 
   if (auth0.isAuthenticated()) {
