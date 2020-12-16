@@ -60,6 +60,10 @@ console.log(user)
         setClick(true)
       }
     }
+    if (auth0.hasFavourites()) {
+      // do I need to refresh this to reflect the cookie after any upadates? shouldn't user use useState?
+      setUser()
+    }
   }, [])
 
   return (
