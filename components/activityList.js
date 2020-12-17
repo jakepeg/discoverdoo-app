@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import LazyLoad from 'react-lazyload'
 import Favourites from './favourites'
+import Placeholder from './placeholder'
 
 const ActivityList = (props) => {
   const { activities } = props
@@ -20,7 +21,7 @@ const ActivityList = (props) => {
       <div className="card-grid" id="grid">
       { activities.map(activity => (
         <div key={activity.id}>
-          <LazyLoad height={400} throttle={500}>
+          <LazyLoad height={400} throttle={500} placeholder={<Placeholder />}>
           <Favourites activityId = {activity._id} />
             <Link href="/activity/[id]" as={`/activity/${activity.id}`}>
               <a className="nounderline">
