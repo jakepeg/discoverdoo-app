@@ -31,9 +31,9 @@ const AddActivity = () => {
 const MyActivities = () => {
   return (
     <Link href="/my-activities">
-      <a className="nounderline">
+      {/* <a className="nounderline"> */}
         <span className="nav-link">MY ACTIVITIES</span>
-      </a>
+      {/* </a> */}
     </Link>
   )
 }
