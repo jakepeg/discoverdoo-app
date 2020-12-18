@@ -33,6 +33,7 @@ const Create = (props) => {
     ageTo: '',
     price: '',
     website: '',
+    youtube: '',
     userId: Cookies.get('sub')
   }
 
@@ -261,6 +262,19 @@ const Create = (props) => {
             <div className="form-error">enter website</div>
           ) : null }
         </div>
+
+        <div className="form-group">
+          <label htmlFor="youtube">Youtube ID<br /><span className="optional">optional</span></label>
+          <input 
+          onChange={handleChange}
+          value={form.youtube}
+          type="text" 
+          className="form-control" 
+          id="youtube" 
+          name="youtube" 
+          placeholder="Youtube video ID" />
+        </div>
+
         <div className="form-group">
           <label htmlFor="description">Description</label>
           <textarea 
@@ -388,6 +402,11 @@ const Create = (props) => {
       box-sizing: border-box;
       width: 90%;
       margin-right: 10%;
+    }
+
+    .optional {
+      color: red;
+      font-size: 0.8rem;
     }
 
     label {

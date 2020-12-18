@@ -32,6 +32,7 @@ const Edit = (props) => {
     ageFrom: '',
     ageTo: '',
     price: '',
+    youtube: '',
     website: ''
   }
 
@@ -279,6 +280,18 @@ const Edit = (props) => {
         </div>
 
         <div className="form-group">
+          <label htmlFor="youtube">Youtube ID<br /><span className="optional">optional</span></label>
+          <input 
+          onChange={handleChange}
+          value={form.youtube}
+          type="text" 
+          className="form-control" 
+          id="youtube" 
+          name="youtube" 
+          placeholder="Youtube video ID" />
+        </div>
+
+        <div className="form-group">
           <label htmlFor="description">Description</label>
           <textarea 
           onChange={handleChange}
@@ -436,6 +449,11 @@ const Edit = (props) => {
       text-decoration: underline;
       font-size: 0.8rem;
       cursor: pointer;
+    }
+
+    .optional {
+      color: red;
+      font-size: 0.8rem;
     }
 
     @media (max-width: 1100px) {

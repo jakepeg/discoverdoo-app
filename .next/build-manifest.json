@@ -24,7 +24,7 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
-    "/my-activities": [
+    "/activity/[id]/edit": [
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ]

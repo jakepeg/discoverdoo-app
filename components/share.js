@@ -41,7 +41,7 @@ const Share = (props) => {
       .share {
         display: flex;
         justify-content: flex-end;
-        margin-top: -30px;
+        margin-top: 0px;
       }
 
       .share-title {

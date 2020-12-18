@@ -6,6 +6,7 @@ import auth0 from '../../../services/auth0'
 import ActivityList from '../../../components/activityList'
 import Share from '../../../components/share'
 import Favourites from '../../../components/favourites'
+import YouTube from 'react-youtube-embed'
 
 const DetailPage = (props) => {
   const router = useRouter()
@@ -79,14 +80,22 @@ const DetailPage = (props) => {
             </div>
             <div>
             <Favourites activityId = {activity._id} />
-            <img className="image-section" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto/v1593005651/${activity.image}`} alt={activity.name} />
+            
+            {typeof activity.youtube != "undefined" &&
+              <div className="image-section">
+                <YouTube id={activity.youtube} />
+              </div>
+            }
+
+            {typeof activity.youtube === "undefined" &&
+              <img className="image-section" src={`https://res.cloudinary.com/jakepeg/image/upload/f_auto/v1593005651/${activity.image}`} alt={activity.name} />
+            }
+
             <Share 
               activityId={activity.id} 
               activityName={activity.name}
             />
             </div>
-            {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/rd1kZXvrQMk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-
 
           </div>
           { auth0.isAuthenticated() &&
