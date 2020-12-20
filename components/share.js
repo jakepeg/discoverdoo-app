@@ -54,7 +54,9 @@ const Share = (props) => {
       }
 
       @media (max-width: 768px) {
-
+        .share {
+          display: none;
+        }
       }
 
     `}</style>
